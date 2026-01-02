@@ -1,6 +1,6 @@
 <div class="max-w-4xl mx-auto">
     <div class="flex items-center gap-4 px-4 py-2">
-        <span class="material-symbols-rounded text-primary">local_bar</span>
+        <div class="bg-[url('/logo.png')] bg-cover bg-center rounded-md aspect-square h-8"></div>
         <div class="font-bold">Spirit Shelf</div>
         <p-button class="ml-auto" variant="text" label="Dashboard" routerLink="/dashboard"></p-button>
     </div>
@@ -65,7 +65,7 @@
         <p-carousel [value]="trending" [numVisible]="3" [numScroll]="1" [circular]="true" autoplayInterval="3000"
             [responsiveOptions]="responsiveOptions" [showNavigators]="window.innerWidth > 768">
             <ng-template let-product #item>
-                <div class="flex flex-col gap-2 m-2">
+                <div class="flex flex-col gap-2 m-2 cursor-pointer" [routerLink]="'/browse/'+product.id">
                     <div [style.backgroundImage]="'url(/imgs/' + product.img + ')'" class="bg-cover bg-center rounded-xl aspect-square w-full"></div>
                     <div class="font-bold">{{product.title}}</div>
                     <div class="flex items-center gap-2">
