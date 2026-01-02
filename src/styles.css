@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
+@font-face {
+    font-family: 'sans';
+    src: url('/GoogleSansFlex-VariableFont.ttf');
+}
+
+@font-face {
+    font-family: 'Material Symbols Rounded';
+    src: url('/MaterialSymbolsRounded.ttf');
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'sans';
+    font-size: 14px;
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.filled {
+    font-variation-settings: 'FILL' 1;
+}
+
+.p-breadcrumb {
+    background-color: transparent !important;
+    padding: 0 !important;
+}
