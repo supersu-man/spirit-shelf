@@ -48,6 +48,11 @@
                     <p class="m-0">{{item}}</p>
                 </p-fieldset>
                 }
+                @if(cocktail.garnish) {
+                    <p-fieldset legend="Garnish">
+                        <p class="m-0">{{cocktail.garnish}}</p>
+                    </p-fieldset>
+                }
             </div>
         </div>
     </div>
