@@ -1,19 +1,16 @@
 import { Component, inject } from '@angular/core';
-import { BreadcrumbModule } from 'primeng/breadcrumb';
-import { StepperModule } from 'primeng/stepper';
 import { ButtonModule } from 'primeng/button';
-import { AccordionModule } from 'primeng/accordion';
 import { TagModule } from 'primeng/tag';
 import { ActivatedRoute } from '@angular/router';
 import { CocktailService } from '../../services/cocktail.service';
 import { FieldsetModule } from 'primeng/fieldset';
-import { PopoverModule } from 'primeng/popover';
 import { MessageService } from 'primeng/api';
 import { TitleCasePipe } from '@angular/common';
+import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'app-details',
-  imports: [BreadcrumbModule, StepperModule, ButtonModule, AccordionModule, TagModule, FieldsetModule, PopoverModule, TitleCasePipe],
+  imports: [ButtonModule, TagModule, FieldsetModule, TitleCasePipe, DialogModule],
   templateUrl: './details.html',
   styles: ``,
 })
@@ -28,6 +25,22 @@ export class Details {
 
   private messageService = inject(MessageService)
 
+  calculate = {
+    visible: false,
+    count: 1,
+    calculations: [] as { text: string, quantity: number }[]
+  }
+
+  openCalculateDialog() {
+    const calculations: { text: string, quantity: number }[] = []
+    this.cocktail.ingredients.forEach((x) => {
+      const match = x.match(/(\d+)\s*ml/i)
+      const num = match ? +match[1] : 1
+      calculations.push({ text: x, quantity: num })
+    })
+    this.calculate.calculations = calculations
+    this.calculate.visible = true
+  }
 
   async sharePage() {
     try {
