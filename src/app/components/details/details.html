@@ -1,14 +1,14 @@
 <div class="flex flex-col gap-4">
     <div class="flex flex-col sm:flex-row gap-4">
         <div class="flex flex-col gap-4">
-            <div class="text-6xl">{{cocktail.title}}</div>
+            <div class="text-6xl">{{cocktail().title}}</div>
             <div class="text-lg text-gray-600">
-                {{cocktail.description}}
+                {{cocktail().description}}
             </div>
             <div class="flex gap-2 items-center">
-                <p-tag [value]="cocktail.base + ' base' | titlecase" />
+                <p-tag [value]="cocktail().base + ' base' | titlecase" />
                 <div class="bg-gray-500 h-1.5 w-1.5 rounded-full"></div>
-                <div class="text-gray-500">{{cocktail.glass | titlecase}}</div>
+                <div class="text-gray-500">{{cocktail().glass | titlecase}}</div>
             </div>
             <div class="flex gap-2">
                 <p-button [rounded]="true">
@@ -18,7 +18,7 @@
                 </p-button>
                 <p-button [rounded]="true" [outlined]="true">
                     <ng-template pTemplate="icon">
-                        <span (click)="toggleSaved()" class="material-symbols-rounded" [class]="saved.has(cocktail.id) ? 'filled':''">favorite</span>
+                        <span (click)="toggleSaved()" class="material-symbols-rounded" [class]="saved().has(cocktail().id) ? 'filled':''">favorite</span>
                     </ng-template>
                 </p-button>
                 <p-button [rounded]="true" [outlined]="true">
@@ -28,14 +28,14 @@
                 </p-button>
             </div>
         </div>
-        <div [style.backgroundImage]="'url(/imgs/' + cocktail.img + ')'" class="bg-cover bg-center rounded-2xl aspect-3/4 w-full sm:h-80"></div>
+        <div [style.backgroundImage]="'url(/imgs/' + cocktail().img + ')'" class="bg-cover bg-center rounded-2xl aspect-3/4 w-full sm:h-80"></div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
         <div class="md:col-span-4">
             <div class="bg-primary-500/10 rounded-2xl p-4 flex flex-col gap-2">
                 <div class="text-xl">Ingredients</div>
-                @for (item of cocktail.ingredients; track $index) {
+                @for (item of cocktail().ingredients; track $index) {
                 <div>{{item}}</div>
                 }
             </div>
@@ -43,14 +43,14 @@
         <div class="md:col-span-8">
             <div class="bg-white rounded-2xl p-4 flex flex-col gap-2">
                 <div class="text-2xl">Instructions</div>
-                @for (item of cocktail.steps; track $index) {
+                @for (item of cocktail().steps; track $index) {
                 <p-fieldset [legend]="'Step ' + ($index+1)">
                     <p class="m-0">{{item}}</p>
                 </p-fieldset>
                 }
-                @if(cocktail.garnish) {
+                @if(cocktail().garnish) {
                     <p-fieldset legend="Garnish">
-                        <p class="m-0">{{cocktail.garnish}}</p>
+                        <p class="m-0">{{cocktail().garnish}}</p>
                     </p-fieldset>
                 }
             </div>
@@ -58,26 +58,26 @@
     </div>
 </div>
 
-<p-dialog header="Calculate ingredients" [modal]="true" [(visible)]="calculate.visible" [style]="{ width: '25rem' }">
+<p-dialog header="Calculate ingredients" [modal]="true" [(visible)]="calculate().visible" [style]="{ width: '25rem' }">
     <div class="flex items-center justify-between">
         <p-button size="small">
             <ng-template pTemplate="icon">
-                <span (click)="calculate.count>1?calculate.count-=1:calculate.count=1"
+                <span (click)="decrementCount()"
                     class="material-symbols-rounded">remove</span>
             </ng-template>
         </p-button>
-        <div class="text-center">{{calculate.count}} serving{{calculate.count>1?'s':''}}</div>
+        <div class="text-center">{{calculate().count}} serving{{calculate().count>1?'s':''}}</div>
         <p-button size="small">
             <ng-template pTemplate="icon">
-                <span (click)="calculate.count+=1" class="material-symbols-rounded">add</span>
+                <span (click)="incrementCount()" class="material-symbols-rounded">add</span>
             </ng-template>
         </p-button>
     </div>
     <div class="flex flex-col mt-4">
-        @for (item of calculate.calculations; track $index) {
+        @for (item of calculate().calculations; track $index) {
         <div class="flex justify-between">
             <div>{{item.text}}</div>
-            <div>{{item.quantity * calculate.count}} {{item.quantity==1?'':'ml'}}</div>
+            <div>{{item.quantity * calculate().count}} {{item.quantity==1?'':'ml'}}</div>
         </div>
         }
     </div>

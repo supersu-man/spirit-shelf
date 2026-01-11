@@ -1,8 +1,8 @@
 <div class="flex h-screen">
-    <div class="bg-white" [class]="isMobile? '': 'w-64'">
-        <p-drawer styleClass="w-64!" [(visible)]="visible" header="Spirit Shelf" [closable]="isMobile" [modal]="isMobile">
+    <div class="bg-white" [class]="isMobile()? '': 'w-64'">
+        <p-drawer styleClass="w-64!" [(visible)]="visible" header="Spirit Shelf" [closable]="isMobile()" [modal]="isMobile()">
             @for (item of routes; track $index) {
-                <div class="flex rounded-lg px-4 py-2 gap-2 cursor-pointer" (click)="isMobile && visible=false" routerLinkActive="text-primary bg-primary-500/10" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="item.route">
+                <div class="flex rounded-lg px-4 py-2 gap-2 cursor-pointer" (click)="isMobile() && visible.set(false)" routerLinkActive="text-primary bg-primary-500/10" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="item.route">
                     <div class="material-symbols-rounded">{{item.icon}}</div>
                     <div>{{item.label}}</div>
                 </div>
@@ -10,9 +10,9 @@
         </p-drawer>
     </div>
     <div class="w-full max-w-4xl mx-auto p-4 overflow-y-auto">
-        @if(isMobile) {
+        @if(isMobile()) {
             <div class="flex gap-2 items-center pb-4">
-                <span class="material-symbols-rounded" (click)="visible=true">menu</span>
+                <span class="material-symbols-rounded" (click)="visible.set(true)">menu</span>
                 <div class="text-xl">Spirit Shelf</div>
             </div>
         }

@@ -1,10 +1,9 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { RouterLink } from "@angular/router";
 import { CarouselModule } from 'primeng/carousel';
 import { CocktailService } from '../../services/cocktail.service';
-import { CocktailModel } from '../../models/cocktail.model';
 import { TitleCasePipe } from '@angular/common';
 
 @Component({
@@ -43,10 +42,8 @@ export class Home {
     }
   ]
 
-  trending: CocktailModel[] = []
-
-  ngOnInit() {
+  trending = computed(() => {
     const trendingIds = ['long-island-iced-tea', 'dry-martini', 'margarita', 'old-fashioned', 'sex-on-the-beach', 'mojito']
-    this.trending = this.cocktails.filter(x => trendingIds.includes(x.id))
-  }
+    return this.cocktails().filter(x => trendingIds.includes(x.id))
+  })
 }

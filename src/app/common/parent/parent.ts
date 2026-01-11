@@ -1,7 +1,6 @@
-import { Component, inject, NgZone } from '@angular/core';
+import { Component, signal, model } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { DrawerModule } from 'primeng/drawer';
-import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-parent',
@@ -10,8 +9,8 @@ import { BreakpointObserver } from '@angular/cdk/layout';
   styles: ``,
 })
 export class Parent {
-  isMobile = window.innerWidth < 768
-  visible = !this.isMobile
+  isMobile = signal(window.innerWidth < 768)
+  visible = model(!this.isMobile())
 
 
   routes = [

@@ -1,7 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
 import { InputTextModule } from 'primeng/inputtext';
 import { TagModule } from 'primeng/tag';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { Cocktail } from '../../common/cocktail/cocktail';
 import { CocktailService } from '../../services/cocktail.service';
@@ -14,19 +14,32 @@ import { CocktailService } from '../../services/cocktail.service';
 })
 export class Browse {
   router = inject(Router)
-  browse = this.router.url == '/browse'
+  activatedRoute = inject(ActivatedRoute)
+  browse = computed(() => this.activatedRoute.snapshot.url[0]?.path === 'browse')
 
   private cocktailService = inject(CocktailService);
   saved = this.cocktailService.savedCocktails;
-  cocktails = this.browse ? this.cocktailService.cocktails : this.cocktailService.cocktails.filter(x => this.saved.has(x.id))
+  
+  private searchValue = signal<string>('');
+  
+  private baseCocktails = computed(() => {
+    const saved = this.saved();
+    return this.browse() 
+      ? this.cocktailService.cocktails() 
+      : this.cocktailService.cocktails().filter(x => saved.has(x.id));
+  });
+
+  cocktails = computed(() => {
+    const search = this.searchValue().toLowerCase();
+    const base = this.baseCocktails();
+    if (!search) {
+      return base;
+    }
+    return base.filter(x => x.title.toLowerCase().includes(search));
+  });
 
   onSearch(event: any) {
-    const cocktails = this.browse ? this.cocktailService.cocktails : this.cocktailService.cocktails.filter(x => this.saved.has(x.id))
-    const searchValue = event.target.value.toLowerCase()
-    if (!searchValue)
-        this.cocktails = cocktails
-    else
-      this.cocktails = cocktails.filter(x => x.title.toLowerCase().includes(searchValue))
+    this.searchValue.set(event.target.value);
   }
 
   goToDetails(id: string) {
@@ -35,9 +48,6 @@ export class Browse {
 
   save(id: string) {
     this.cocktailService.toggleSaveCocktail(id)
-    this.saved = this.cocktailService.savedCocktails
-    if (!this.browse)
-      this.cocktails = this.cocktailService.cocktails.filter(x => this.saved.has(x.id))
   }
 
 }

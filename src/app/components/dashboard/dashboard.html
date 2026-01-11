@@ -6,15 +6,15 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white rounded-xl overflow-hidden">
-        <div [style.backgroundImage]="'url(/imgs/' + drinkofTheDay.img + ')'" class="bg-cover bg-center aspect-square w-full"></div>
+        <div [style.backgroundImage]="'url(/imgs/' + drinkofTheDay().img + ')'" class="bg-cover bg-center aspect-square w-full"></div>
         <div class="flex flex-col gap-2 p-4">
-            <div class="text-2xl">{{drinkofTheDay.title}}</div>
-            <div class="text-neutral-600">{{drinkofTheDay.description}}</div>
+            <div class="text-2xl">{{drinkofTheDay().title}}</div>
+            <div class="text-neutral-600">{{drinkofTheDay().description}}</div>
             <div class="flex gap-2 items-center mt-auto">
-                <p-tag [value]="drinkofTheDay.base + ' Base'" />
+                <p-tag [value]="drinkofTheDay().base + ' Base'" />
                 <div class="bg-gray-500 h-1.5 w-1.5 rounded-full"></div>
-                <div class="text-gray-500">{{drinkofTheDay.glass | titlecase}}</div>
-                <p-button class="ml-auto" label="View Recipe" [routerLink]="'/browse/' + drinkofTheDay.id"></p-button>
+                <div class="text-gray-500">{{drinkofTheDay().glass | titlecase}}</div>
+                <p-button class="ml-auto" label="View Recipe" [routerLink]="'/browse/' + drinkofTheDay().id"></p-button>
             </div>
         </div>
     </div>
@@ -26,8 +26,8 @@
         </div>
     </div>
     <div class="grid gap-4 grid-cols-[repeat(auto-fill,minmax(150px,1fr))]">
-        @for(item of random; track $index) {
-            <app-cocktail [saved]="saved.has(item.id)" [cocktail]="item" (onOpen)="goToDetails(item.id)" (onSave)="toggleSave(item.id)"></app-cocktail>
+        @for(item of random(); track $index) {
+            <app-cocktail [saved]="saved().has(item.id)" [cocktail]="item" (onOpen)="goToDetails(item.id)" (onSave)="toggleSave(item.id)"></app-cocktail>
         }
     </div>
 

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { TagModule } from 'primeng/tag';
@@ -17,20 +17,20 @@ import { TitleCasePipe } from '@angular/common';
 export class Dashboard {
   private cocktailService = inject(CocktailService)
   
-  drinkofTheDay = this.getDrinkOfTheDay(this.cocktailService.cocktails)
-  random: CocktailModel[] = []
+  drinkofTheDay = computed(() => this.getDrinkOfTheDay(this.cocktailService.cocktails()))
+  random = signal<CocktailModel[]>([])
   saved = this.cocktailService.savedCocktails
 
   router = inject(Router)
 
-  ngOnInit() {
+  constructor() {
     this.shuffle();
   }
 
   shuffle = () => {
-    const cocktails = this.cocktailService.cocktails
+    const cocktails = [...this.cocktailService.cocktails()]
     const shuffled = cocktails.sort(() => 0.5 - Math.random());
-    this.random = shuffled.slice(0, 4);
+    this.random.set(shuffled.slice(0, 4));
   }
 
   private hash(str: string): number {
@@ -53,7 +53,6 @@ export class Dashboard {
 
   toggleSave(id: string) {
     this.cocktailService.toggleSaveCocktail(id)
-    this.saved = this.cocktailService.savedCocktails
   }
 
 }

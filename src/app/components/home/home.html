@@ -62,7 +62,7 @@
             </div>
         </div>
 
-        <p-carousel [value]="trending" [numVisible]="3" [numScroll]="1" [circular]="true" autoplayInterval="3000"
+        <p-carousel [value]="trending()" [numVisible]="3" [numScroll]="1" [circular]="true" autoplayInterval="3000"
             [responsiveOptions]="responsiveOptions" [showNavigators]="window.innerWidth > 768">
             <ng-template let-product #item>
                 <div class="flex flex-col gap-2 m-2 cursor-pointer" [routerLink]="'/browse/'+product.id">

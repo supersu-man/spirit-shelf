@@ -1,10 +1,10 @@
 <div class="flex flex-col w-full h-full bg-white rounded-xl overflow-hidden cursor-pointer relative" (click)="onOpen.emit()">
     <div class="flex items-center justify-center m-3 absolute end-0 rounded-full w-8 h-8 bg-primary-950" (click)="$event.stopPropagation();onSave.emit()">
-        <span class="material-symbols-rounded text-primary pt-1" [class]="saved ? 'filled':''">favorite</span>
+        <span class="material-symbols-rounded text-primary pt-1" [class]="saved() ? 'filled':''">favorite</span>
     </div>
-    <div [style.backgroundImage]="'url(/imgs/' + cocktail?.img + ')'" class="bg-cover bg-center w-full aspect-3/4"></div>
+    <div [style.backgroundImage]="'url(/imgs/' + cocktail()?.img + ')'" class="bg-cover bg-center w-full aspect-3/4"></div>
     <div class="flex flex-col gap-2 p-2">
-        <div class="font-bold">{{cocktail?.title}}</div>
-        <p-tag [value]="cocktail?.base + ' base' | titlecase" />
+        <div class="font-bold">{{cocktail()?.title}}</div>
+        <p-tag [value]="cocktail()?.base + ' base' | titlecase" />
     </div>
 </div>

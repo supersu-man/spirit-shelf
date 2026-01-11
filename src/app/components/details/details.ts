@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { ActivatedRoute } from '@angular/router';
@@ -17,29 +17,28 @@ import { DialogModule } from 'primeng/dialog';
 export class Details {
 
   activatedRoute = inject(ActivatedRoute)
-  id = this.activatedRoute.snapshot.paramMap.get('id')
+  id = signal(this.activatedRoute.snapshot.paramMap.get('id'))
 
   private cocktailService = inject(CocktailService)
-  cocktail = this.cocktailService.getCocktail(this.id || '')
+  cocktail = computed(() => this.cocktailService.getCocktail(this.id() || ''))
   saved = this.cocktailService.savedCocktails
 
   private messageService = inject(MessageService)
 
-  calculate = {
+  calculate = signal({
     visible: false,
     count: 1,
     calculations: [] as { text: string, quantity: number }[]
-  }
+  })
 
   openCalculateDialog() {
     const calculations: { text: string, quantity: number }[] = []
-    this.cocktail.ingredients.forEach((x) => {
+    this.cocktail().ingredients.forEach((x) => {
       const match = x.match(/(\d+)\s*ml/i)
       const num = match ? +match[1] : 1
       calculations.push({ text: x, quantity: num })
     })
-    this.calculate.calculations = calculations
-    this.calculate.visible = true
+    this.calculate.update(calc => ({ ...calc, calculations, visible: true }))
   }
 
   async sharePage() {
@@ -59,7 +58,14 @@ export class Details {
   }
 
   toggleSaved() {
-    this.cocktailService.toggleSaveCocktail(this.cocktail.id)
-    this.saved = this.cocktailService.savedCocktails
+    this.cocktailService.toggleSaveCocktail(this.cocktail().id)
+  }
+
+  incrementCount() {
+    this.calculate.update(calc => ({ ...calc, count: calc.count + 1 }))
+  }
+
+  decrementCount() {
+    this.calculate.update(calc => ({ ...calc, count: calc.count > 1 ? calc.count - 1 : 1 }))
   }
 }
