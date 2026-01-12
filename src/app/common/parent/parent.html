@@ -1,21 +1,80 @@
-<div class="flex h-screen">
-    <div class="bg-white" [class]="isMobile()? '': 'w-64'">
-        <p-drawer styleClass="w-64!" [(visible)]="visible" header="Spirit Shelf" [closable]="isMobile()" [modal]="isMobile()">
-            @for (item of routes; track $index) {
-                <div class="flex rounded-lg px-4 py-2 gap-2 cursor-pointer" (click)="isMobile() && visible.set(false)" routerLinkActive="text-primary bg-primary-500/10" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="item.route">
-                    <div class="material-symbols-rounded">{{item.icon}}</div>
-                    <div>{{item.label}}</div>
+<div class="flex h-screen overflow-hidden bg-gray-50">
+    <!-- Desktop Sidebar (always visible) -->
+    @if (!isMobile()) {
+        <aside class="w-64 bg-white border-r border-gray-200 flex flex-col shrink-0">
+            <!-- Sidebar Header -->
+            <div class="flex items-center gap-3 px-6 py-4 border-b border-gray-200">
+                <div class="bg-[url('/logo.png')] bg-cover bg-center rounded-md aspect-square h-10 w-10"></div>
+                <div class="flex flex-col">
+                    <div class="font-bold text-lg">Spirit Shelf</div>
+                    <div class="text-xs text-gray-500">Mixology Master</div>
                 </div>
-            }
-        </p-drawer>
-    </div>
-    <div class="w-full max-w-4xl mx-auto p-4 overflow-y-auto">
-        @if(isMobile()) {
-            <div class="flex gap-2 items-center pb-4">
-                <span class="material-symbols-rounded" (click)="visible.set(true)">menu</span>
-                <div class="text-xl">Spirit Shelf</div>
             </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
+                @for (item of routes; track item.route) {
+                    <a
+                        [routerLink]="item.route"
+                        routerLinkActive="bg-primary-500/10 text-primary font-medium"
+                        [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+                        class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors duration-150 cursor-pointer">
+                        <span class="material-symbols-rounded text-xl">{{item.icon}}</span>
+                        <span class="text-sm">{{item.label}}</span>
+                    </a>
+                }
+            </nav>
+        </aside>
+    }
+
+    <!-- Mobile Drawer -->
+    @if (isMobile()) {
+        <p-drawer
+            [(visible)]="drawerVisible"
+            styleClass="w-80">
+            <ng-template pTemplate="header">
+                <div class="flex items-center gap-3 px-2 py-2">
+                    <div class="bg-[url('/logo.png')] bg-cover bg-center rounded-md aspect-square h-10 w-10"></div>
+                    <div class="flex flex-col">
+                        <div class="font-bold text-lg">Spirit Shelf</div>
+                        <div class="text-xs text-gray-500">Mixology Master</div>
+                    </div>
+                </div>
+            </ng-template>
+            <nav class="flex flex-col px-4 py-2 space-y-1">
+                @for (item of routes; track item.route) {
+                    <a
+                        [routerLink]="item.route"
+                        routerLinkActive="bg-primary-500/10 text-primary font-medium"
+                        [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+                        (click)="closeDrawerOnMobile()"
+                        class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors duration-150 cursor-pointer">
+                        <span class="material-symbols-rounded text-xl">{{item.icon}}</span>
+                        <span class="text-sm">{{item.label}}</span>
+                    </a>
+                }
+            </nav>
+        </p-drawer>
+    }
+
+    <!-- Main Content Area -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+        <!-- Mobile Header -->
+        @if (isMobile()) {
+            <header class="bg-white border-b border-gray-200 px-4 py-3 flex items-center gap-3 shrink-0">
+                <span (click)="toggleDrawer()" class="material-symbols-rounded text-gray-700 text-xl">menu</span>
+                <div class="flex items-center gap-2 flex-1">
+                    <div class="bg-[url('/logo.png')] bg-cover bg-center rounded-md aspect-square h-8 w-8"></div>
+                    <div class="font-bold text-lg">Spirit Shelf</div>
+                </div>
+            </header>
         }
-        <router-outlet ></router-outlet>
+
+        <!-- Content -->
+        <main class="flex-1 overflow-y-auto">
+            <div class="max-w-4xl mx-auto p-4 md:p-6 lg:p-8">
+                <router-outlet></router-outlet>
+            </div>
+        </main>
     </div>
 </div>

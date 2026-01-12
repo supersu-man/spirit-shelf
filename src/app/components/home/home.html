@@ -1,96 +1,142 @@
-<div class="max-w-4xl mx-auto">
-    <div class="flex items-center gap-4 px-4 py-2">
-        <div class="bg-[url('/logo.png')] bg-cover bg-center rounded-md aspect-square h-8"></div>
-        <div class="font-bold">Spirit Shelf</div>
-        <p-button class="ml-auto" variant="text" label="Dashboard" routerLink="/dashboard"></p-button>
-    </div>
-</div>
-
-
-<div class="bg-white border-t border-gray-300">
-    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 py-8 items-center">
-        <div class="flex flex-col gap-4 flex-1">
-            <div class="text-5xl">Master the Art of Mixology</div>
-            <div class="text-lg text-gray-600">
-                Discover a world of cocktails at your fingertips. Whether you're a seasoned mixologist or just starting
-                out, our app offers a vast collection of recipes, tips, and techniques to help you create the perfect
-                drink every time.
-            </div>
-            <p-button label="Explore Recipies" routerLink="/browse"></p-button>
-        </div>
-        <div class="bg-[url('/imgs/old-fashioned.webp')] bg-cover bg-center rounded-xl aspect-square w-full"></div>
-    </div>
-</div>
-
-<div class="max-w-4xl mx-auto p-4 py-8 flex flex-col gap-4">
-    <div class="text-primary text-sm text-center">FEATURES</div>
-    <div class="text-3xl text-center">Why Use Spirit Shelf?</div>
-    <div class="text-gray-600 text-center">Everything you need to craft the perfect drink, from discovery to the final pour.</div>
-
-    <div class="grid gap-4 grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
-        <div class="rounded-lg bg-white border border-gray-300 p-4 flex flex-col">
-            <div class="p-1.5 rounded-lg bg-primary-500/20 mr-auto">
-                <div class="text-primary material-symbols-rounded">search</div>
-            </div>
-            <div class="text-xl mt-3">Recipe Explorer</div>
-            <div class="text-gray-500 mt-2">Smart Search allows you to find drinks by ingredients you already have in your cabinet. No more guessing.</div>
-        </div>
-        <div class="rounded-lg bg-white border border-gray-300 overflow-hidden p-4 flex flex-col">
-            <div class="p-1.5 rounded-lg bg-primary-500/20 mr-auto">
-                <div class="text-primary material-symbols-rounded">bookmark</div>
-            </div>
-            <div class="text-xl mt-3">Favourites Manager</div>
-            <div class="text-gray-500 mt-2">Build your own digital bar. Save your top picks for quick access and create curated lists for any occasion.</div>
-        </div>
-        <div class="rounded-lg bg-white border border-gray-300 overflow-hidden p-4 flex flex-col">
-            <div class="p-1.5 rounded-lg bg-primary-500/20 mr-auto">
-                <div class="text-primary material-symbols-rounded">calculate</div>
-            </div>
-            <div class="text-xl mt-3">Ingredient Calculator</div>
-            <div class="text-gray-500 mt-2">Planning a party? Scale ingredients instantly for 1 or 100 guests with our precise party calculator.</div>
-        </div>
-    </div>
-</div>
-
-<div class="bg-white">
-    <div class="max-w-4xl mx-auto flex flex-col p-4 py-8 gap-4">
-        <div class="flex justify-between">
-            <div class="text-3xl">Trending Cocktails</div>
-            <div class="flex items-center text-primary cursor-pointer" routerLink="/browse">
-                <div>View all</div>
-                <span class="material-symbols-rounded" style="font-size:medium;">arrow_forward</span>
-            </div>
-        </div>
-
-        <p-carousel [value]="trending()" [numVisible]="3" [numScroll]="1" [circular]="true" autoplayInterval="3000"
-            [responsiveOptions]="responsiveOptions" [showNavigators]="window.innerWidth > 768">
-            <ng-template let-product #item>
-                <div class="flex flex-col gap-2 m-2 cursor-pointer" [routerLink]="'/browse/'+product.id">
-                    <div [style.backgroundImage]="'url(/imgs/' + product.img + ')'" class="bg-cover bg-center rounded-xl aspect-square w-full"></div>
-                    <div class="font-bold">{{product.title}}</div>
-                    <div class="flex items-center gap-2">
-                        <p-tag [value]="product.base + ' base' | titlecase" />
-                        <div class="bg-gray-500 h-1.5 w-1.5 rounded-full"></div>
-                        <div class="text-gray-500">{{product.glass | titlecase}}</div>
-                    </div>
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-primary-50 to-white border-b border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div class="flex flex-col gap-6">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                    Master the Art of Mixology
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                    Discover a world of cocktails at your fingertips. Whether you're a seasoned mixologist or just starting
+                    out, our app offers a vast collection of recipes, tips, and techniques to help you create the perfect
+                    drink every time.
+                </p>
+                <div>
+                    <p-button 
+                        label="Explore Recipes" 
+                        routerLink="/browse"
+                        [rounded]="true"
+                        size="large"
+                        class="w-full sm:w-auto">
+                    </p-button>
                 </div>
+            </div>
+            <div class="relative">
+                <div class="bg-[url('/imgs/old-fashioned.webp')] bg-cover bg-center rounded-2xl aspect-square w-full shadow-lg"></div>
+                <div class="absolute -bottom-4 -right-4 bg-primary-500 text-white p-4 rounded-xl shadow-lg hidden sm:block">
+                    <div class="text-2xl font-bold">100+</div>
+                    <div class="text-sm">Recipes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-12 sm:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="text-sm font-semibold text-primary uppercase tracking-wider">Features</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">
+                Why Use Spirit Shelf?
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Everything you need to craft the perfect drink, from discovery to the final pour.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            @for (feature of features; track feature.icon) {
+                <div class="bg-white rounded-xl border border-gray-200 p-6 flex flex-col hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                        <span class="material-symbols-rounded text-2xl text-primary">{{feature.icon}}</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">{{feature.title}}</h3>
+                    <p class="text-gray-600 leading-relaxed">{{feature.description}}</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Trending Section -->
+<section class="bg-white border-y border-gray-200 py-12 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+            <div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Trending Cocktails</h2>
+                <p class="text-gray-600 mt-2">Popular recipes loved by mixologists</p>
+            </div>
+            <a 
+                routerLink="/browse" 
+                class="flex items-center gap-2 text-primary font-semibold hover:text-primary-600 transition-colors cursor-pointer">
+                <span>View all</span>
+                <span class="material-symbols-rounded text-lg">arrow_forward</span>
+            </a>
+        </div>
+
+        <p-carousel 
+            [value]="trending()" 
+            [numVisible]="3" 
+            [numScroll]="1" 
+            [circular]="true" 
+            autoplayInterval="3000"
+            [responsiveOptions]="responsiveOptions" 
+            [showNavigators]="window.innerWidth > 768">
+            <ng-template let-product #item>
+                <a 
+                    [routerLink]="'/browse/'+product.id"
+                    class="flex flex-col gap-3 m-2 group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-xl aspect-square">
+                        <div 
+                            [style.backgroundImage]="'url(/imgs/' + product.img + ')'" 
+                            class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 group-hover:text-primary transition-colors">{{product.title}}</h3>
+                        <div class="flex items-center gap-2 mt-1.5">
+                            <p-tag [value]="product.base + ' base' | titlecase" />
+                            <span class="text-gray-400">•</span>
+                            <span class="text-sm text-gray-600">{{product.glass | titlecase}}</span>
+                        </div>
+                    </div>
+                </a>
             </ng-template>
         </p-carousel>
     </div>
-</div>
+</section>
 
-<div class="max-w-4xl mx-auto p-4 py-8 flex flex-col gap-4 text-center">
-    <div class="text-3xl">Ready to mix your first drink?</div>
-    <div class="text-gray-600 text-center">Join thousands of cocktail enthusiasts and start discovering new flavors today.</div>
-    <p-button [rounded]="true" label="Explore Recipies" routerLink="/browse"></p-button>
-</div>
+<!-- CTA Section -->
+<section class="py-12 sm:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Ready to mix your first drink?
+        </h2>
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join thousands of cocktail enthusiasts and start discovering new flavors today.
+        </p>
+        <p-button 
+            [rounded]="true" 
+            label="Explore Recipes" 
+            routerLink="/browse"
+            size="large">
+        </p-button>
+    </div>
+</section>
 
-<div class="flex flex-col p-4 py-8 gap-2 bg-white border-t border-gray-300">
-    <div class="flex gap-2 justify-center items-center">
-        <span class="material-symbols-rounded text-primary">local_bar</span>
-        <div class="font-bold">Spirit Shelf</div>
+<!-- Footer -->
+<footer class="bg-white border-t border-gray-200 py-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center gap-3">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-rounded text-primary text-2xl">local_bar</span>
+                <span class="font-bold text-lg text-gray-900">Spirit Shelf</span>
+            </div>
+            <p class="text-sm text-gray-500">
+                &copy; 2025 Spirit Shelf. All rights reserved
+            </p>
+        </div>
     </div>
-    <div class="text-gray-500 text-center">
-        &copy; 2025 Spirit Shelf. All rights reserved
-    </div>
-</div>
+</footer>

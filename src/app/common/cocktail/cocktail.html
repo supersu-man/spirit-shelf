@@ -1,10 +1,33 @@
-<div class="flex flex-col w-full h-full bg-white rounded-xl overflow-hidden cursor-pointer relative" (click)="onOpen.emit()">
-    <div class="flex items-center justify-center m-3 absolute end-0 rounded-full w-8 h-8 bg-primary-950" (click)="$event.stopPropagation();onSave.emit()">
-        <span class="material-symbols-rounded text-primary pt-1" [class]="saved() ? 'filled':''">favorite</span>
+<div 
+    class="group flex flex-col w-full h-full bg-white rounded-xl overflow-hidden cursor-pointer relative border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
+    (click)="onOpen.emit()">
+    <!-- Favorite Button -->
+    <button
+        (click)="$event.stopPropagation(); onSave.emit()"
+        class="absolute top-3 right-3 z-10 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer"
+        [class]="saved() 
+            ? 'bg-primary-500 text-white shadow-md hover:bg-primary-600' 
+            : 'bg-white/90 backdrop-blur-sm text-gray-600 hover:bg-white hover:shadow-md'"
+        aria-label="Toggle favorite">
+        <span class="material-symbols-rounded text-xl" [class.filled]="saved()">favorite</span>
+    </button>
+
+    <!-- Image -->
+    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100">
+        <div 
+            [style.backgroundImage]="'url(/imgs/' + cocktail()?.img + ')'" 
+            class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </div>
-    <div [style.backgroundImage]="'url(/imgs/' + cocktail()?.img + ')'" class="bg-cover bg-center w-full aspect-3/4"></div>
-    <div class="flex flex-col gap-2 p-2">
-        <div class="font-bold">{{cocktail()?.title}}</div>
-        <p-tag [value]="cocktail()?.base + ' base' | titlecase" />
+
+    <!-- Content -->
+    <div class="flex flex-col gap-2 p-4">
+        <h3 class="font-semibold text-gray-900 line-clamp-2 group-hover:text-primary transition-colors">
+            {{cocktail()?.title}}
+        </h3>
+        <div class="flex items-center gap-2">
+            <p-tag [value]="cocktail()?.base + ' base' | titlecase" />
+        </div>
     </div>
 </div>

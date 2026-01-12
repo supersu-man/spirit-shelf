@@ -1,14 +1,12 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { InputTextModule } from 'primeng/inputtext';
-import { TagModule } from 'primeng/tag';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
 import { Cocktail } from '../../common/cocktail/cocktail';
 import { CocktailService } from '../../services/cocktail.service';
 
 @Component({
   selector: 'app-browse',
-  imports: [InputTextModule, TagModule, ButtonModule, Cocktail],
+  imports: [InputTextModule, Cocktail],
   templateUrl: './browse.html',
   styles: ``,
 })

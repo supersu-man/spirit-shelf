@@ -19,6 +19,24 @@ export class Home {
 
   window = window
 
+  features = [
+    {
+      icon: 'search',
+      title: 'Recipe Explorer',
+      description: 'Smart Search allows you to find drinks by ingredients you already have in your cabinet. No more guessing.'
+    },
+    {
+      icon: 'bookmark',
+      title: 'Favourites Manager',
+      description: 'Build your own digital bar. Save your top picks for quick access and create curated lists for any occasion.'
+    },
+    {
+      icon: 'calculate',
+      title: 'Ingredient Calculator',
+      description: 'Planning a party? Scale ingredients instantly for 1 or 100 guests with our precise party calculator.'
+    }
+  ]
+
   responsiveOptions = [
     {
       breakpoint: '1400px',

@@ -1,6 +1,5 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
 import { TagModule } from 'primeng/tag';
 import { Router, RouterLink } from "@angular/router";
 import { CocktailService } from '../../services/cocktail.service';
@@ -10,7 +9,7 @@ import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [InputTextModule, ButtonModule, TagModule, RouterLink, Cocktail, TitleCasePipe],
+  imports: [ButtonModule, TagModule, RouterLink, Cocktail, TitleCasePipe],
   templateUrl: './dashboard.html',
   styles: ``,
 })
@@ -22,6 +21,13 @@ export class Dashboard {
   saved = this.cocktailService.savedCocktails
 
   router = inject(Router)
+
+  greeting = computed(() => {
+    const hour = new Date().getHours();
+    if (hour < 12) return 'Good Morning!';
+    if (hour < 18) return 'Good Afternoon!';
+    return 'Good Evening!';
+  })
 
   constructor() {
     this.shuffle();

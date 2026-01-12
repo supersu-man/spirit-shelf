@@ -30,8 +30,3 @@ body {
 .filled {
     font-variation-settings: 'FILL' 1;
 }
-
-.p-breadcrumb {
-    background-color: transparent !important;
-    padding: 0 !important;
-}

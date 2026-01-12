@@ -1,16 +1,14 @@
 import { Component, inject, signal, computed } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { ActivatedRoute } from '@angular/router';
 import { CocktailService } from '../../services/cocktail.service';
-import { FieldsetModule } from 'primeng/fieldset';
 import { MessageService } from 'primeng/api';
 import { TitleCasePipe } from '@angular/common';
 import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'app-details',
-  imports: [ButtonModule, TagModule, FieldsetModule, TitleCasePipe, DialogModule],
+  imports: [TagModule, TitleCasePipe, DialogModule],
   templateUrl: './details.html',
   styles: ``,
 })
