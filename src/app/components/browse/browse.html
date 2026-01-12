@@ -17,6 +17,19 @@
             class="w-full! pl-12! pr-4! py-3!" />
     </div>
 
+    <!-- Spirit Filters -->
+    <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none mx-1 px-1">
+        <p-button (click)="selectedSpirit.set('All')" label="All" [rounded]="true" size="small"
+            styleClass="whitespace-nowrap" [severity]="selectedSpirit() === 'All' ? 'primary' : 'secondary'"
+            [outlined]="selectedSpirit() !== 'All'"></p-button>
+
+        @for (spirit of spirits(); track spirit) {
+        <p-button (click)="selectedSpirit.set(spirit)" [label]="spirit" [rounded]="true" size="small"
+            styleClass="whitespace-nowrap" [severity]="selectedSpirit() === spirit ? 'primary' : 'secondary'"
+            [outlined]="selectedSpirit() !== spirit"></p-button>
+        }
+    </div>
+
     <!-- Results Count -->
     @if (cocktails().length > 0) {
     <div class="text-sm text-surface-600 dark:text-surface-400">

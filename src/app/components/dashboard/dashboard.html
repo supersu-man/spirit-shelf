@@ -54,11 +54,11 @@
                 <h2 class="text-2xl sm:text-3xl font-bold text-surface-900 dark:text-surface-0">Random Picks</h2>
                 <p class="text-surface-600 dark:text-surface-400 mt-1">Discover something new</p>
             </div>
-            <button (click)="shuffle()"
-                class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-100 dark:bg-surface-800 hover:bg-surface-200 dark:hover:bg-surface-700 text-surface-700 dark:text-surface-200 font-medium transition-colors duration-150 cursor-pointer">
-                <span class="material-symbols-rounded text-lg">redo</span>
-                <span>Shuffle</span>
-            </button>
+            <p-button (click)="shuffle()" label="Shuffle" severity="secondary" size="small">
+                <ng-template #icon>
+                    <span class="material-symbols-rounded text-lg">redo</span>
+                </ng-template>
+            </p-button>
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">

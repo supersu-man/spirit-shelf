@@ -1,12 +1,13 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Cocktail } from '../../common/cocktail/cocktail';
 import { CocktailService } from '../../services/cocktail.service';
 
 @Component({
   selector: 'app-browse',
-  imports: [InputTextModule, Cocktail],
+  imports: [InputTextModule, Cocktail, ButtonModule],
   templateUrl: './browse.html',
   styles: ``,
 })
@@ -17,23 +18,32 @@ export class Browse {
 
   private cocktailService = inject(CocktailService);
   saved = this.cocktailService.savedCocktails;
-  
+  spirits = this.cocktailService.uniqueSpirits;
+
   private searchValue = signal<string>('');
-  
+  selectedSpirit = signal<string>('All');
+
   private baseCocktails = computed(() => {
     const saved = this.saved();
-    return this.browse() 
-      ? this.cocktailService.cocktails() 
+    return this.browse()
+      ? this.cocktailService.cocktails()
       : this.cocktailService.cocktails().filter(x => saved.has(x.id));
   });
 
   cocktails = computed(() => {
     const search = this.searchValue().toLowerCase();
-    const base = this.baseCocktails();
-    if (!search) {
-      return base;
+    const spirit = this.selectedSpirit();
+    let filtered = this.baseCocktails();
+
+    if (spirit !== 'All') {
+      filtered = filtered.filter(x => x.base === spirit);
     }
-    return base.filter(x => x.title.toLowerCase().includes(search));
+
+    if (search) {
+      filtered = filtered.filter(x => x.title.toLowerCase().includes(search));
+    }
+
+    return filtered;
   });
 
   onSearch(event: any) {

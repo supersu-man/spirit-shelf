@@ -1,13 +1,12 @@
 <div class="group flex flex-col w-full h-full bg-surface-card dark:bg-surface-900 rounded-xl overflow-hidden cursor-pointer relative border border-surface dark:border-surface-700 hover:border-surface-400 dark:hover:border-surface-600 hover:shadow-lg transition-all duration-300"
     (click)="onOpen.emit()">
     <!-- Favorite Button -->
-    <button (click)="$event.stopPropagation(); onSave.emit()"
-        class="absolute top-3 right-3 z-10 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer"
-        [class]="saved() 
-            ? 'bg-primary-500 text-white shadow-md hover:bg-primary-600' 
-            : 'backdrop-blur-sm text-surface-300 hover:bg-surface-900 hover:shadow-md'" aria-label="Toggle favorite">
-        <span class="material-symbols-rounded text-xl" [class.filled]="saved()">favorite</span>
-    </button>
+    <p-button (click)="$event.stopPropagation(); onSave.emit()" class="absolute top-3 right-3 z-10" [rounded]="true"
+        [severity]="saved() ? 'primary' : 'secondary'" [text]="!saved()" [size]="'small'" aria-label="Toggle favorite">
+        <ng-template #icon>
+            <span class="material-symbols-rounded text-xl" [class.filled]="saved()">favorite</span>
+        </ng-template>
+    </p-button>
 
     <!-- Image -->
     <div class="relative aspect-[3/4] overflow-hidden bg-surface-100 dark:bg-surface-800">

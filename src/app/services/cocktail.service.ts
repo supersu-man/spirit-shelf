@@ -7,8 +7,13 @@ import { CocktailModel } from '../models/cocktail.model';
 })
 export class CocktailService {
   private readonly cocktailsData = signal<CocktailModel[]>([...cocktails] as CocktailModel[]);
-  
+
   cocktails = this.cocktailsData.asReadonly();
+
+  uniqueSpirits = computed(() => {
+    const spirits = this.cocktailsData().map(x => x.base).filter(x => !!x);
+    return [...new Set(spirits)].sort();
+  });
 
   private savedCocktailsData = signal<Set<string>>(this.loadSavedCocktails());
 
@@ -26,7 +31,7 @@ export class CocktailService {
 
   toggleSaveCocktail(id: string) {
     const saved = new Set(this.savedCocktailsData())
-    if(saved.has(id)) {
+    if (saved.has(id)) {
       saved.delete(id)
     } else {
       saved.add(id)

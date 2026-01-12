@@ -22,24 +22,26 @@
 
             <!-- Action Buttons -->
             <div class="flex flex-wrap gap-3">
-                <button (click)="openCalculateDialog()"
-                    class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-100 dark:bg-surface-800 hover:bg-surface-200 dark:hover:bg-surface-700 text-surface-700 dark:text-surface-200 font-medium transition-colors duration-150 cursor-pointer">
-                    <span class="material-symbols-rounded">calculate</span>
-                    <span>Calculate</span>
-                </button>
-                <button (click)="toggleSaved()"
-                    class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 transition-colors duration-150 cursor-pointer"
-                    [class]="saved().has(cocktail().id) 
-                        ? 'border-primary-500 bg-primary-50 dark:bg-primary-950/20 text-primary-700 dark:text-primary-300' 
-                        : 'border-surface-300 dark:border-surface-700 hover:border-surface-400 dark:hover:border-surface-600 text-surface-700 dark:text-surface-200'">
-                    <span class="material-symbols-rounded" [class.filled]="saved().has(cocktail().id)">favorite</span>
-                    <span>{{saved().has(cocktail().id) ? 'Saved' : 'Save'}}</span>
-                </button>
-                <button (click)="sharePage()"
-                    class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-surface-300 dark:border-surface-700 hover:border-surface-400 dark:hover:border-surface-600 text-surface-700 dark:text-surface-200 font-medium transition-colors duration-150 cursor-pointer">
-                    <span class="material-symbols-rounded">share</span>
-                    <span>Share</span>
-                </button>
+                <p-button (click)="openCalculateDialog()" label="Calculate" severity="secondary">
+                    <ng-template #icon>
+                        <span class="material-symbols-rounded">calculate</span>
+                    </ng-template>
+                </p-button>
+
+                <p-button (click)="toggleSaved()" [label]="saved().has(cocktail().id) ? 'Saved' : 'Save'"
+                    [severity]="saved().has(cocktail().id) ? 'primary' : 'secondary'"
+                    [outlined]="!saved().has(cocktail().id)">
+                    <ng-template #icon>
+                        <span class="material-symbols-rounded"
+                            [class.filled]="saved().has(cocktail().id)">favorite</span>
+                    </ng-template>
+                </p-button>
+
+                <p-button (click)="sharePage()" label="Share" severity="secondary" [outlined]="true">
+                    <ng-template #icon>
+                        <span class="material-symbols-rounded">share</span>
+                    </ng-template>
+                </p-button>
             </div>
         </div>
 
@@ -114,19 +116,21 @@
     <div class="flex flex-col gap-6">
         <!-- Serving Counter -->
         <div class="flex items-center justify-between bg-surface-ground rounded-lg p-4">
-            <button (click)="decrementCount()"
-                class="w-10 h-10 rounded-lg bg-surface-card dark:bg-surface-800 border border-surface dark:border-surface-700 hover:bg-surface-ground flex items-center justify-center transition-colors cursor-pointer">
-                <span class="material-symbols-rounded text-surface-700 dark:text-surface-200">remove</span>
-            </button>
+            <p-button (click)="decrementCount()" size="small" severity="secondary" [text]="true" [rounded]="true">
+                <ng-template #icon>
+                    <span class="material-symbols-rounded">remove</span>
+                </ng-template>
+            </p-button>
             <div class="text-center">
                 <div class="text-2xl font-bold text-surface-900 dark:text-surface-0">{{calculate().count}}</div>
                 <div class="text-sm text-surface-600 dark:text-surface-400">serving{{calculate().count > 1 ? 's' : ''}}
                 </div>
             </div>
-            <button (click)="incrementCount()"
-                class="w-10 h-10 rounded-lg bg-surface-card dark:bg-surface-800 border border-surface dark:border-surface-700 hover:bg-surface-ground flex items-center justify-center transition-colors cursor-pointer">
-                <span class="material-symbols-rounded text-surface-700 dark:text-surface-200">add</span>
-            </button>
+            <p-button (click)="incrementCount()" size="small" severity="secondary" [text]="true" [rounded]="true">
+                <ng-template #icon>
+                    <span class="material-symbols-rounded">add</span>
+                </ng-template>
+            </p-button>
         </div>
 
         <!-- Calculations List -->

@@ -1,5 +1,6 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { TagModule } from 'primeng/tag';
+import { ButtonModule } from 'primeng/button';
 import { ActivatedRoute } from '@angular/router';
 import { CocktailService } from '../../services/cocktail.service';
 import { MessageService } from 'primeng/api';
@@ -8,7 +9,7 @@ import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'app-details',
-  imports: [TagModule, TitleCasePipe, DialogModule],
+  imports: [TagModule, TitleCasePipe, DialogModule, ButtonModule],
   templateUrl: './details.html',
   styles: ``,
 })
