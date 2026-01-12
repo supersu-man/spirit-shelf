@@ -2,6 +2,7 @@ import { Component, signal, model, inject, OnDestroy, PLATFORM_ID } from '@angul
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { DrawerModule } from 'primeng/drawer';
 import { isPlatformBrowser } from '@angular/common';
+import { ThemeService } from '../../services/theme.service';
 
 const MOBILE_BREAKPOINT = 768;
 
@@ -14,6 +15,9 @@ const MOBILE_BREAKPOINT = 768;
 export class Parent implements OnDestroy {
   private platformId = inject(PLATFORM_ID);
   private resizeListener?: () => void;
+
+  // Theme service
+  themeService = inject(ThemeService);
 
   // Responsive breakpoint: mobile < 768px
   isMobile = signal(false);

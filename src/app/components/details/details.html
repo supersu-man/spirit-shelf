@@ -4,10 +4,11 @@
         <!-- Content -->
         <div class="flex flex-col gap-6 order-2 lg:order-1">
             <div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+                <h1
+                    class="text-4xl sm:text-5xl lg:text-6xl font-bold text-surface-900 dark:text-surface-0 mb-4 leading-tight">
                     {{cocktail().title}}
                 </h1>
-                <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                <p class="text-lg sm:text-xl text-surface-600 dark:text-surface-400 leading-relaxed">
                     {{cocktail().description}}
                 </p>
             </div>
@@ -15,30 +16,27 @@
             <!-- Tags -->
             <div class="flex flex-wrap items-center gap-3">
                 <p-tag [value]="cocktail().base + ' base' | titlecase" />
-                <span class="text-gray-400">•</span>
-                <span class="text-gray-600">{{cocktail().glass | titlecase}}</span>
+                <span class="text-surface-400 dark:text-surface-500">•</span>
+                <span class="text-surface-600 dark:text-surface-400">{{cocktail().glass | titlecase}}</span>
             </div>
 
             <!-- Action Buttons -->
             <div class="flex flex-wrap gap-3">
-                <button 
-                    (click)="openCalculateDialog()"
-                    class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium transition-colors duration-150 cursor-pointer">
+                <button (click)="openCalculateDialog()"
+                    class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-100 dark:bg-surface-800 hover:bg-surface-200 dark:hover:bg-surface-700 text-surface-700 dark:text-surface-200 font-medium transition-colors duration-150 cursor-pointer">
                     <span class="material-symbols-rounded">calculate</span>
                     <span>Calculate</span>
                 </button>
-                <button 
-                    (click)="toggleSaved()"
+                <button (click)="toggleSaved()"
                     class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 transition-colors duration-150 cursor-pointer"
                     [class]="saved().has(cocktail().id) 
-                        ? 'border-primary-500 bg-primary-50 text-primary-700' 
-                        : 'border-gray-300 hover:border-gray-400 text-gray-700'">
+                        ? 'border-primary-500 bg-primary-50 dark:bg-primary-950/20 text-primary-700 dark:text-primary-300' 
+                        : 'border-surface-300 dark:border-surface-700 hover:border-surface-400 dark:hover:border-surface-600 text-surface-700 dark:text-surface-200'">
                     <span class="material-symbols-rounded" [class.filled]="saved().has(cocktail().id)">favorite</span>
                     <span>{{saved().has(cocktail().id) ? 'Saved' : 'Save'}}</span>
                 </button>
-                <button 
-                    (click)="sharePage()"
-                    class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-gray-300 hover:border-gray-400 text-gray-700 font-medium transition-colors duration-150 cursor-pointer">
+                <button (click)="sharePage()"
+                    class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-surface-300 dark:border-surface-700 hover:border-surface-400 dark:hover:border-surface-600 text-surface-700 dark:text-surface-200 font-medium transition-colors duration-150 cursor-pointer">
                     <span class="material-symbols-rounded">share</span>
                     <span>Share</span>
                 </button>
@@ -47,8 +45,7 @@
 
         <!-- Image -->
         <div class="order-1 lg:order-2">
-            <div 
-                [style.backgroundImage]="'url(/imgs/' + cocktail().img + ')'" 
+            <div [style.backgroundImage]="'url(/imgs/' + cocktail().img + ')'"
                 class="bg-cover bg-center rounded-2xl aspect-[3/4] w-full shadow-lg">
             </div>
         </div>
@@ -59,16 +56,16 @@
         <!-- Ingredients Card -->
         <div class="lg:col-span-4">
             <div class="bg-gradient-to-br from-primary-50 to-primary-100/50 rounded-2xl p-6 border border-primary-200">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-0 mb-6 flex items-center gap-2">
                     <span class="material-symbols-rounded text-primary">local_bar</span>
                     Ingredients
                 </h2>
                 <ul class="space-y-3">
                     @for (item of cocktail().ingredients; track $index) {
-                        <li class="flex items-start gap-3">
-                            <span class="material-symbols-rounded text-primary mt-0.5 text-lg">check_circle</span>
-                            <span class="text-gray-700 leading-relaxed">{{item}}</span>
-                        </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-rounded text-primary mt-0.5 text-lg">check_circle</span>
+                        <span class="text-surface-700 dark:text-surface-200 leading-relaxed">{{item}}</span>
+                    </li>
                     }
                 </ul>
             </div>
@@ -76,32 +73,34 @@
 
         <!-- Instructions Card -->
         <div class="lg:col-span-8">
-            <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <div class="bg-surface-card rounded-2xl p-6 border border-surface shadow-sm">
+                <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-0 mb-6 flex items-center gap-2">
                     <span class="material-symbols-rounded text-primary">menu_book</span>
                     Instructions
                 </h2>
                 <div class="space-y-4">
                     @for (item of cocktail().steps; track $index) {
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-sm">
-                                {{$index + 1}}
-                            </div>
-                            <div class="flex-1 pt-1">
-                                <p class="text-gray-700 leading-relaxed">{{item}}</p>
-                            </div>
+                    <div class="flex gap-4">
+                        <div
+                            class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold text-sm">
+                            {{$index + 1}}
                         </div>
+                        <div class="flex-1 pt-1">
+                            <p class="text-surface-700 dark:text-surface-200 leading-relaxed">{{item}}</p>
+                        </div>
+                    </div>
                     }
                     @if(cocktail().garnish) {
-                        <div class="flex gap-4 pt-2 border-t border-gray-200">
-                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center">
-                                <span class="material-symbols-rounded text-lg">eco</span>
-                            </div>
-                            <div class="flex-1 pt-1">
-                                <p class="font-semibold text-gray-900 mb-1">Garnish</p>
-                                <p class="text-gray-700">{{cocktail().garnish}}</p>
-                            </div>
+                    <div class="flex gap-4 pt-2 border-t border-surface dark:border-surface-700">
+                        <div
+                            class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center">
+                            <span class="material-symbols-rounded text-lg">eco</span>
                         </div>
+                        <div class="flex-1 pt-1">
+                            <p class="font-semibold text-surface-900 dark:text-surface-0 mb-1">Garnish</p>
+                            <p class="text-surface-700 dark:text-surface-200">{{cocktail().garnish}}</p>
+                        </div>
+                    </div>
                     }
                 </div>
             </div>
@@ -110,40 +109,36 @@
 </div>
 
 <!-- Calculate Dialog -->
-<p-dialog 
-    header="Calculate Ingredients" 
-    [modal]="true" 
-    [(visible)]="calculate().visible" 
-    [style]="{ width: '90vw', maxWidth: '28rem' }"
-    [closable]="true">
+<p-dialog header="Calculate Ingredients" [modal]="true" [(visible)]="calculate().visible"
+    [style]="{ width: '90vw', maxWidth: '28rem' }" [closable]="true">
     <div class="flex flex-col gap-6">
         <!-- Serving Counter -->
-        <div class="flex items-center justify-between bg-gray-50 rounded-lg p-4">
-            <button 
-                (click)="decrementCount()"
-                class="w-10 h-10 rounded-lg bg-white border border-gray-300 hover:bg-gray-50 flex items-center justify-center transition-colors cursor-pointer">
-                <span class="material-symbols-rounded text-gray-700">remove</span>
+        <div class="flex items-center justify-between bg-surface-ground rounded-lg p-4">
+            <button (click)="decrementCount()"
+                class="w-10 h-10 rounded-lg bg-surface-card dark:bg-surface-800 border border-surface dark:border-surface-700 hover:bg-surface-ground flex items-center justify-center transition-colors cursor-pointer">
+                <span class="material-symbols-rounded text-surface-700 dark:text-surface-200">remove</span>
             </button>
             <div class="text-center">
-                <div class="text-2xl font-bold text-gray-900">{{calculate().count}}</div>
-                <div class="text-sm text-gray-600">serving{{calculate().count > 1 ? 's' : ''}}</div>
+                <div class="text-2xl font-bold text-surface-900 dark:text-surface-0">{{calculate().count}}</div>
+                <div class="text-sm text-surface-600 dark:text-surface-400">serving{{calculate().count > 1 ? 's' : ''}}
+                </div>
             </div>
-            <button 
-                (click)="incrementCount()"
-                class="w-10 h-10 rounded-lg bg-white border border-gray-300 hover:bg-gray-50 flex items-center justify-center transition-colors cursor-pointer">
-                <span class="material-symbols-rounded text-gray-700">add</span>
+            <button (click)="incrementCount()"
+                class="w-10 h-10 rounded-lg bg-surface-card dark:bg-surface-800 border border-surface dark:border-surface-700 hover:bg-surface-ground flex items-center justify-center transition-colors cursor-pointer">
+                <span class="material-symbols-rounded text-surface-700 dark:text-surface-200">add</span>
             </button>
         </div>
 
         <!-- Calculations List -->
         <div class="space-y-3">
             @for (item of calculate().calculations; track $index) {
-                <div class="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
-                    <span class="text-gray-700 flex-1">{{item.text}}</span>
-                    <span class="font-semibold text-gray-900 ml-4">
-                        {{item.quantity * calculate().count}} {{item.quantity == 1 ? '' : 'ml'}}
-                    </span>
-                </div>
+            <div
+                class="flex justify-between items-center py-2 border-b border-surface dark:border-surface-700 last:border-0">
+                <span class="text-surface-700 dark:text-surface-200 flex-1">{{item.text}}</span>
+                <span class="font-semibold text-surface-900 dark:text-surface-0 ml-4">
+                    {{item.quantity * calculate().count}} {{item.quantity == 1 ? '' : 'ml'}}
+                </span>
+            </div>
             }
         </div>
     </div>

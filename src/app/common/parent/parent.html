@@ -1,73 +1,89 @@
-<div class="flex h-screen overflow-hidden bg-gray-50">
+<div class="flex h-screen overflow-hidden bg-surface-ground">
     <!-- Desktop Sidebar (always visible) -->
     @if (!isMobile()) {
-        <aside class="w-64 bg-white border-r border-gray-200 flex flex-col shrink-0">
-            <!-- Sidebar Header -->
-            <div class="flex items-center gap-3 px-6 py-4 border-b border-gray-200">
-                <div class="bg-[url('/logo.png')] bg-cover bg-center rounded-md aspect-square h-10 w-10"></div>
-                <div class="flex flex-col">
-                    <div class="font-bold text-lg">Spirit Shelf</div>
-                    <div class="text-xs text-gray-500">Mixology Master</div>
-                </div>
+    <aside class="w-64 bg-surface-section border-r border-surface flex flex-col shrink-0">
+        <!-- Sidebar Header -->
+        <div class="flex items-center gap-3 px-6 py-4 border-b border-surface">
+            <div class="bg-[url('/logo.png')] bg-cover bg-center rounded-md aspect-square h-10 w-10"></div>
+            <div class="flex flex-col">
+                <div class="font-bold text-lg">Spirit Shelf</div>
+                <div class="text-xs text-surface-500">Mixology Master</div>
             </div>
+        </div>
 
-            <!-- Navigation Links -->
-            <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
-                @for (item of routes; track item.route) {
-                    <a
-                        [routerLink]="item.route"
-                        routerLinkActive="bg-primary-500/10 text-primary font-medium"
-                        [routerLinkActiveOptions]="{ exact: item.route === '/' }"
-                        class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors duration-150 cursor-pointer">
-                        <span class="material-symbols-rounded text-xl">{{item.icon}}</span>
-                        <span class="text-sm">{{item.label}}</span>
-                    </a>
-                }
-            </nav>
-        </aside>
+        <!-- Navigation Links -->
+        <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
+            @for (item of routes; track item.route) {
+            <a [routerLink]="item.route" routerLinkActive="bg-primary-500/10 text-primary font-medium"
+                [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+                class="flex items-center gap-3 px-4 py-3 rounded-lg text-surface-600 dark:text-surface-200 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors duration-150 cursor-pointer">
+                <span class="material-symbols-rounded text-xl">{{item.icon}}</span>
+                <span class="text-sm">{{item.label}}</span>
+            </a>
+            }
+        </nav>
+
+        <!-- Theme Toggle -->
+        <div class="px-4 py-4 border-t border-surface">
+            <button (click)="themeService.toggleTheme()"
+                class="flex items-center gap-3 px-4 py-3 rounded-lg text-surface-600 dark:text-surface-200 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors duration-150 cursor-pointer w-full">
+                <span class="material-symbols-rounded text-xl">
+                    {{ themeService.isDarkMode() ? 'light_mode' : 'dark_mode' }}
+                </span>
+                <span class="text-sm">{{ themeService.isDarkMode() ? 'Light Mode' : 'Dark Mode' }}</span>
+            </button>
+        </div>
+    </aside>
     }
 
     <!-- Mobile Drawer -->
     @if (isMobile()) {
-        <p-drawer
-            [(visible)]="drawerVisible"
-            styleClass="w-80">
-            <ng-template pTemplate="header">
-                <div class="flex items-center gap-3 px-2 py-2">
-                    <div class="bg-[url('/logo.png')] bg-cover bg-center rounded-md aspect-square h-10 w-10"></div>
-                    <div class="flex flex-col">
-                        <div class="font-bold text-lg">Spirit Shelf</div>
-                        <div class="text-xs text-gray-500">Mixology Master</div>
-                    </div>
+    <p-drawer [(visible)]="drawerVisible" styleClass="w-80">
+        <ng-template pTemplate="header">
+            <div class="flex items-center gap-3 px-2 py-2">
+                <div class="bg-[url('/logo.png')] bg-cover bg-center rounded-md aspect-square h-10 w-10"></div>
+                <div class="flex flex-col">
+                    <div class="font-bold text-lg">Spirit Shelf</div>
+                    <div class="text-xs text-surface-500">Mixology Master</div>
                 </div>
-            </ng-template>
-            <nav class="flex flex-col px-4 py-2 space-y-1">
-                @for (item of routes; track item.route) {
-                    <a
-                        [routerLink]="item.route"
-                        routerLinkActive="bg-primary-500/10 text-primary font-medium"
-                        [routerLinkActiveOptions]="{ exact: item.route === '/' }"
-                        (click)="closeDrawerOnMobile()"
-                        class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors duration-150 cursor-pointer">
-                        <span class="material-symbols-rounded text-xl">{{item.icon}}</span>
-                        <span class="text-sm">{{item.label}}</span>
-                    </a>
-                }
-            </nav>
-        </p-drawer>
+            </div>
+        </ng-template>
+        <nav class="flex flex-col px-4 py-2 space-y-1 flex-1">
+            @for (item of routes; track item.route) {
+            <a [routerLink]="item.route" routerLinkActive="bg-primary-500/10 text-primary font-medium"
+                [routerLinkActiveOptions]="{ exact: item.route === '/' }" (click)="closeDrawerOnMobile()"
+                class="flex items-center gap-3 px-4 py-3 rounded-lg text-surface-600 dark:text-surface-200 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors duration-150 cursor-pointer">
+                <span class="material-symbols-rounded text-xl">{{item.icon}}</span>
+                <span class="text-sm">{{item.label}}</span>
+            </a>
+            }
+        </nav>
+
+        <!-- Theme Toggle for Mobile -->
+        <div class="px-4 py-4 border-t border-surface">
+            <button (click)="themeService.toggleTheme()"
+                class="flex items-center gap-3 px-4 py-3 rounded-lg text-surface-600 dark:text-surface-200 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors duration-150 cursor-pointer w-full">
+                <span class="material-symbols-rounded text-xl">
+                    {{ themeService.isDarkMode() ? 'light_mode' : 'dark_mode' }}
+                </span>
+                <span class="text-sm">{{ themeService.isDarkMode() ? 'Light Mode' : 'Dark Mode' }}</span>
+            </button>
+        </div>
+    </p-drawer>
     }
 
     <!-- Main Content Area -->
     <div class="flex-1 flex flex-col overflow-hidden">
         <!-- Mobile Header -->
         @if (isMobile()) {
-            <header class="bg-white border-b border-gray-200 px-4 py-3 flex items-center gap-3 shrink-0">
-                <span (click)="toggleDrawer()" class="material-symbols-rounded text-gray-700 text-xl">menu</span>
-                <div class="flex items-center gap-2 flex-1">
-                    <div class="bg-[url('/logo.png')] bg-cover bg-center rounded-md aspect-square h-8 w-8"></div>
-                    <div class="font-bold text-lg">Spirit Shelf</div>
-                </div>
-            </header>
+        <header class="bg-surface-section border-b border-surface px-4 py-3 flex items-center gap-3 shrink-0">
+            <span (click)="toggleDrawer()"
+                class="material-symbols-rounded text-surface-600 dark:text-surface-200 text-xl cursor-pointer">menu</span>
+            <div class="flex items-center gap-2 flex-1">
+                <div class="bg-[url('/logo.png')] bg-cover bg-center rounded-md aspect-square h-8 w-8"></div>
+                <div class="font-bold text-lg">Spirit Shelf</div>
+            </div>
+        </header>
         }
 
         <!-- Content -->

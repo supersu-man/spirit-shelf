@@ -1,60 +1,54 @@
 <div class="flex flex-col gap-6 sm:gap-8">
     <!-- Header -->
     <div class="flex flex-col gap-2">
-        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">
+        <h1 class="text-3xl sm:text-4xl font-bold text-surface-900 dark:text-surface-0">
             {{browse() ? 'Browse' : 'Favourite'}} Cocktails
         </h1>
-        <p class="text-lg text-gray-600">
+        <p class="text-lg text-surface-600 dark:text-surface-400">
             Explore over 100 recipes for any occasion.
         </p>
     </div>
 
     <!-- Search Bar -->
     <div class="relative">
-        <span class="material-symbols-rounded absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">search</span>
-        <input 
-            type="text" 
-            pInputText 
-            (input)="onSearch($event)" 
-            placeholder="Search recipes, ingredients..." 
+        <span
+            class="material-symbols-rounded absolute left-4 top-1/2 -translate-y-1/2 text-surface-400 dark:text-surface-500">search</span>
+        <input type="text" pInputText (input)="onSearch($event)" placeholder="Search recipes, ingredients..."
             class="w-full! pl-12! pr-4! py-3!" />
     </div>
 
     <!-- Results Count -->
     @if (cocktails().length > 0) {
-        <div class="text-sm text-gray-600">
-            Showing {{cocktails().length}} {{cocktails().length === 1 ? 'recipe' : 'recipes'}}
-        </div>
+    <div class="text-sm text-surface-600 dark:text-surface-400">
+        Showing {{cocktails().length}} {{cocktails().length === 1 ? 'recipe' : 'recipes'}}
+    </div>
     }
 
     <!-- Cocktails Grid -->
     @if (cocktails().length > 0) {
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-            @for (item of cocktails(); track item.id) {
-                <app-cocktail 
-                    [cocktail]="item" 
-                    (onOpen)="goToDetails(item.id)" 
-                    [saved]="saved().has(item.id)" 
-                    (onSave)="save(item.id)">
-                </app-cocktail>
-            }
-        </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        @for (item of cocktails(); track item.id) {
+        <app-cocktail [cocktail]="item" (onOpen)="goToDetails(item.id)" [saved]="saved().has(item.id)"
+            (onSave)="save(item.id)">
+        </app-cocktail>
+        }
+    </div>
     } @else {
-        <!-- Empty State -->
-        <div class="flex flex-col items-center justify-center py-16 px-4 text-center">
-            <div class="w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center mb-6">
-                <span class="material-symbols-rounded text-5xl text-gray-400">search_off</span>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                {{browse() ? 'No recipes found' : 'No favourites yet'}}
-            </h3>
-            <p class="text-gray-600 max-w-md">
-                @if (browse()) {
-                    Try adjusting your search terms or browse all recipes.
-                } @else {
-                    Start saving your favourite cocktails to see them here.
-                }
-            </p>
+    <!-- Empty State -->
+    <div class="flex flex-col items-center justify-center py-16 px-4 text-center">
+        <div class="w-24 h-24 rounded-full bg-surface-100 dark:bg-surface-800 flex items-center justify-center mb-6">
+            <span class="material-symbols-rounded text-5xl text-surface-400 dark:text-surface-500">search_off</span>
         </div>
+        <h3 class="text-xl font-semibold text-surface-900 dark:text-surface-0 mb-2">
+            {{browse() ? 'No recipes found' : 'No favourites yet'}}
+        </h3>
+        <p class="text-surface-600 dark:text-surface-400 max-w-md">
+            @if (browse()) {
+            Try adjusting your search terms or browse all recipes.
+            } @else {
+            Start saving your favourite cocktails to see them here.
+            }
+        </p>
+    </div>
     }
 </div>

@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tailwindcss-primeui";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 @font-face {
     font-family: 'sans';
     src: url('/GoogleSansFlex-VariableFont.ttf');
@@ -20,11 +23,11 @@ body {
 }
 
 .material-symbols-rounded {
-  font-family: 'Material Symbols Rounded';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 1;
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1;
 }
 
 .filled {
