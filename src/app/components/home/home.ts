@@ -5,6 +5,7 @@ import { RouterLink } from "@angular/router";
 import { CarouselModule } from 'primeng/carousel';
 import { CocktailService } from '../../services/cocktail.service';
 import { TitleCasePipe } from '@angular/common';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,9 @@ export class Home {
 
   cocktailService = inject(CocktailService)
   cocktails = this.cocktailService.cocktails
+
+  // Theme service
+  themeService = inject(ThemeService);
 
   window = window
 
