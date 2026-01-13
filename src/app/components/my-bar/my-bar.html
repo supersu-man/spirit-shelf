@@ -1,0 +1,75 @@
+<div class="flex flex-col gap-6 sm:gap-8">
+    <!-- Header -->
+    <div class="flex flex-col gap-2">
+        <h1 class="text-3xl sm:text-4xl font-bold text-surface-900 dark:text-surface-0">
+            My Bar
+        </h1>
+        <p class="text-lg text-surface-600 dark:text-surface-400">
+            Select the ingredients you have to see what you can mix.
+        </p>
+    </div>
+
+    <!-- Ingredient Selector -->
+    <div class="bg-surface-card dark:bg-surface-900 rounded-2xl border border-surface p-6 shadow-sm">
+        <div class="flex flex-col gap-4">
+            <label class="font-semibold text-surface-900 dark:text-surface-0">I have these ingredients:</label>
+            <p-multiSelect [options]="ingredients()" [ngModel]="selectedIngredients()" [virtualScroll]="true"
+                [virtualScrollItemSize]="50" (ngModelChange)="selectedIngredients.set($event)"
+                placeholder="Search or select ingredients..." class="w-full">
+            </p-multiSelect>
+        </div>
+    </div>
+
+    <!-- Results -->
+    @if (selectedIngredients().length > 0) {
+    <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-2">
+            <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-0">Matching Cocktails</h2>
+            <p class="text-surface-600 dark:text-surface-400">
+                Sorted by missing ingredients
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            @for (item of matches(); track item.id) {
+            <div class="flex flex-col gap-2">
+                <app-cocktail [cocktail]="item" (onOpen)="goToDetails(item.id)" [saved]="saved().has(item.id)"
+                    (onSave)="save(item.id)">
+                </app-cocktail>
+
+                <div class="px-1">
+                    @if (item.missingCount === 0) {
+                    <span class="text-xs font-semibold text-green-500 flex items-center gap-1">
+                        <span class="material-symbols-rounded text-sm">check_circle</span>
+                        Ready to mix!
+                    </span>
+                    } @else {
+                    <div class="flex flex-col gap-1">
+                        <span class="text-xs font-semibold text-orange-500">
+                            Missing {{item.missingCount}} item{{item.missingCount > 1 ? 's' : ''}}
+                        </span>
+                        <p class="text-[10px] text-surface-500 dark:text-surface-400 line-clamp-1">
+                            {{item.missingIngredients.join(', ')}}
+                        </p>
+                    </div>
+                    }
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+    } @else {
+    <!-- Empty State -->
+    <div class="flex flex-col items-center justify-center py-16 px-4 text-center">
+        <div class="w-24 h-24 rounded-full bg-surface-100 dark:bg-surface-800 flex items-center justify-center mb-6">
+            <span class="material-symbols-rounded text-5xl text-surface-400 dark:text-surface-500">inventory_2</span>
+        </div>
+        <h3 class="text-xl font-semibold text-surface-900 dark:text-surface-0 mb-2">
+            Your bar is empty
+        </h3>
+        <p class="text-surface-600 dark:text-surface-400 max-w-md">
+            Select ingredients above to find cocktails you can make right now.
+        </p>
+    </div>
+    }
+</div>

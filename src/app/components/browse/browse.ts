@@ -40,7 +40,10 @@ export class Browse {
     }
 
     if (search) {
-      filtered = filtered.filter(x => x.title.toLowerCase().includes(search));
+      filtered = filtered.filter(x =>
+        x.title.toLowerCase().includes(search) ||
+        x.ingredients.some(ing => ing.name.toLowerCase().includes(search))
+      );
     }
 
     return filtered;

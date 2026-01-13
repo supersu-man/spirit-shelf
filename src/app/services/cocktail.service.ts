@@ -1,6 +1,7 @@
 import { Injectable, signal, computed } from '@angular/core';
 import cocktails from '../../../public/data/cocktails.json';
 import { CocktailModel } from '../models/cocktail.model';
+import { IngredientModel } from '../models/ingredient.model';
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +14,16 @@ export class CocktailService {
   uniqueSpirits = computed(() => {
     const spirits = this.cocktailsData().map(x => x.base).filter(x => !!x);
     return [...new Set(spirits)].sort();
+  });
+
+  allIngredients = computed(() => {
+    const all = new Set<string>();
+    this.cocktailsData().forEach(cocktail => {
+      cocktail.ingredients.forEach(ing => {
+        all.add(ing.name);
+      });
+    });
+    return [...all].sort();
   });
 
   private savedCocktailsData = signal<Set<string>>(this.loadSavedCocktails());
@@ -38,6 +49,13 @@ export class CocktailService {
     }
     localStorage.setItem('saved_cocktails', JSON.stringify([...saved]))
     this.savedCocktailsData.set(saved)
+  }
+
+  formatIngredient(ing: IngredientModel): string {
+    if (!ing.amount && !ing.unit) return ing.name;
+    const amountStr = ing.amount > 0 ? ing.amount.toString() : '';
+    const unitStr = ing.unit ? ` ${ing.unit}` : '';
+    return `${amountStr}${unitStr} ${ing.name}`.trim();
   }
 
 

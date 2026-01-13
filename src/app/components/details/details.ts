@@ -6,6 +6,7 @@ import { CocktailService } from '../../services/cocktail.service';
 import { MessageService } from 'primeng/api';
 import { TitleCasePipe } from '@angular/common';
 import { DialogModule } from 'primeng/dialog';
+import { IngredientModel } from '../../models/ingredient.model';
 
 @Component({
   selector: 'app-details',
@@ -18,7 +19,7 @@ export class Details {
   activatedRoute = inject(ActivatedRoute)
   id = signal(this.activatedRoute.snapshot.paramMap.get('id'))
 
-  private cocktailService = inject(CocktailService)
+  public cocktailService = inject(CocktailService)
   cocktail = computed(() => this.cocktailService.getCocktail(this.id() || ''))
   saved = this.cocktailService.savedCocktails
 
@@ -26,18 +27,11 @@ export class Details {
 
   calculate = signal({
     visible: false,
-    count: 1,
-    calculations: [] as { text: string, quantity: number }[]
+    count: 1
   })
 
   openCalculateDialog() {
-    const calculations: { text: string, quantity: number }[] = []
-    this.cocktail().ingredients.forEach((x) => {
-      const match = x.match(/(\d+)\s*ml/i)
-      const num = match ? +match[1] : 1
-      calculations.push({ text: x, quantity: num })
-    })
-    this.calculate.update(calc => ({ ...calc, calculations, visible: true }))
+    this.calculate.update(calc => ({ ...calc, visible: true }))
   }
 
   async sharePage() {

@@ -26,6 +26,7 @@ export class Parent implements OnDestroy {
   routes = [
     { icon: 'home', label: 'Home', route: '/' },
     { icon: 'dashboard', label: 'Dashboard', route: '/dashboard' },
+    { icon: 'inventory_2', label: 'My Bar', route: '/my-bar' },
     { icon: 'explore', label: 'Browse', route: '/browse' },
     { icon: 'favorite', label: 'Favourite', route: '/favourite' },
   ];
@@ -54,7 +55,7 @@ export class Parent implements OnDestroy {
 
     const wasMobile = this.isMobile();
     const isNowMobile = window.innerWidth < MOBILE_BREAKPOINT;
-    
+
     this.isMobile.set(isNowMobile);
 
     // Auto-manage drawer state on breakpoint change
