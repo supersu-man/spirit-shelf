@@ -3,9 +3,21 @@
     "id": "alexander",
     "title": "Alexander",
     "ingredients": [
-      "30 ml Cognac",
-      "30 ml Crème de Cacao (Brown)",
-      "30 ml Fresh Cream"
+      {
+        "name": "Cognac",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Crème de Cacao (Brown)",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Cream",
+        "amount": 30.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Finish with a light sprinkle of ground nutmeg on top",
     "steps": [
@@ -21,9 +33,21 @@
     "id": "americano",
     "title": "Americano",
     "ingredients": [
-      "30 ml Bitter Campari",
-      "30 ml Sweet Red Vermouth",
-      "A splash of Soda Water"
+      {
+        "name": "Bitter Campari",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sweet Red Vermouth",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Soda Water",
+        "amount": 5.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Add half an orange slice and a twist of lemon peel",
     "steps": [
@@ -40,9 +64,21 @@
     "id": "angel-face",
     "title": "Angel Face",
     "ingredients": [
-      "30 ml Gin",
-      "30 ml Apricot Brandy",
-      "30 ml Calvados"
+      {
+        "name": "Gin",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Apricot Brandy",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Calvados",
+        "amount": 30.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -58,10 +94,26 @@
     "id": "aviation",
     "title": "Aviation",
     "ingredients": [
-      "45 ml Gin",
-      "15 ml Maraschino Luxardo",
-      "15 ml Fresh Lemon Juice",
-      "1 Bar Spoon Crème de Violette"
+      {
+        "name": "Gin",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Maraschino Luxardo",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Crème de Violette",
+        "amount": 5.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a maraschino cherry in the drink",
     "steps": [
@@ -77,10 +129,26 @@
     "id": "bees-knees",
     "title": "Bee’s Knees",
     "ingredients": [
-      "52.5 ml Dry Gin",
-      "2 teaspoons Honey Syrup",
-      "22.5 ml Fresh Lemon Juice",
-      "22.5 ml Fresh Orange Juice"
+      {
+        "name": "Dry Gin",
+        "amount": 52.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Honey Syrup",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Orange Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      }
     ],
     "garnish": "Add a twist of lemon or orange zest on top",
     "steps": [
@@ -97,8 +165,16 @@
     "id": "bellini",
     "title": "Bellini",
     "ingredients": [
-      "100 ml Prosecco",
-      "50 ml White Peach Puree"
+      {
+        "name": "Prosecco",
+        "amount": 100.0,
+        "unit": "ml"
+      },
+      {
+        "name": "White Peach Puree",
+        "amount": 50.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -114,10 +190,26 @@
     "id": "between-the-sheets",
     "title": "Between the Sheets",
     "ingredients": [
-      "30 ml White Rum",
-      "30 ml Cognac",
-      "30 ml Triple Sec",
-      "20 ml Fresh Lemon Juice"
+      {
+        "name": "White Rum",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cognac",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Triple Sec",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 20.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -134,8 +226,16 @@
     "id": "black-russian",
     "title": "Black Russian",
     "ingredients": [
-      "50 ml Vodka",
-      "20 ml Coffee Liqueur"
+      {
+        "name": "Vodka",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Coffee Liqueur",
+        "amount": 20.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -152,11 +252,31 @@
     "id": "bloody-mary",
     "title": "Bloody Mary",
     "ingredients": [
-      "45 ml Vodka",
-      "90 ml Tomato Juice",
-      "15 ml Fresh Lemon Juice",
-      "2 dashes Worcestershire Sauce",
-      "Tabasco, Celery Salt, Pepper (Up to taste)"
+      {
+        "name": "Vodka",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Tomato Juice",
+        "amount": 90.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Worcestershire Sauce",
+        "amount": 1.25,
+        "unit": "ml"
+      },
+      {
+        "name": "Tabasco, Celery Salt, Pepper (Up to taste)",
+        "amount": 0.0,
+        "unit": ""
+      }
     ],
     "garnish": "Place a celery stick and a lemon wedge on the rim",
     "steps": [
@@ -173,9 +293,21 @@
     "id": "boulevardier",
     "title": "Boulevardier",
     "ingredients": [
-      "45 ml Bourbon or Rye Whiskey",
-      "30 ml Bitter Campari",
-      "30 ml Sweet Red Vermouth"
+      {
+        "name": "Bourbon or Rye Whiskey",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Bitter Campari",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sweet Red Vermouth",
+        "amount": 30.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Finish with a twist of orange zest or optionally a twist of lemon zest",
     "steps": [
@@ -192,10 +324,26 @@
     "id": "bramble",
     "title": "Bramble",
     "ingredients": [
-      "50 ml Gin",
-      "25 ml Fresh Lemon Juice",
-      "12.5 ml Sugar Syrup",
-      "15 ml Crème de Mûre"
+      {
+        "name": "Gin",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 25.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar Syrup",
+        "amount": 12.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Crème de Mûre",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a lemon slice and a few fresh blackberries on top",
     "steps": [
@@ -212,12 +360,36 @@
     "id": "brandy-crusta",
     "title": "Brandy Crusta",
     "ingredients": [
-      "52.5 ml Brandy",
-      "7.5 ml Maraschino Luxardo",
-      "1 Bar Spoon Curacao",
-      "15 ml Fresh Lemon Juice",
-      "1 Bar Spoon Simple Syrup",
-      "2 Dashes Aromatic Bitters"
+      {
+        "name": "Brandy",
+        "amount": 52.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Maraschino Luxardo",
+        "amount": 7.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Curacao",
+        "amount": 5.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": 5.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Aromatic Bitters",
+        "amount": 1.25,
+        "unit": "ml"
+      }
     ],
     "garnish": "Curl a strip of orange or lemon peel inside the glass after coating the rim with sugar",
     "steps": [
@@ -233,9 +405,21 @@
     "id": "caipirinha",
     "title": "Caipirinha",
     "ingredients": [
-      "60 ml Cachaça",
-      "1 Lime cut into small wedges",
-      "4 Teaspoons White Cane Sugar"
+      {
+        "name": "Cachaça",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Lime cut into small wedges",
+        "amount": 1.0,
+        "unit": "pieces"
+      },
+      {
+        "name": "White Cane Sugar",
+        "amount": 20.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -253,10 +437,26 @@
     "id": "canchanchara",
     "title": "Canchanchara",
     "ingredients": [
-      "60 ml Cuban Aguardiente",
-      "15 ml Fresh Lime Juice",
-      "15 ml Raw Honey",
-      "50 ml Water"
+      {
+        "name": "Cuban Aguardiente",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Raw Honey",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Water",
+        "amount": 50.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a lime wedge on the rim of the glass",
     "steps": [
@@ -274,9 +474,21 @@
     "id": "cardinale",
     "title": "Cardinale",
     "ingredients": [
-      "40 ml Gin",
-      "20 ml Dry Vermouth",
-      "10 ml Bitter Campari"
+      {
+        "name": "Gin",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Dry Vermouth",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Bitter Campari",
+        "amount": 10.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Add a twist of lemon zest on top",
     "steps": [
@@ -293,10 +505,26 @@
     "id": "casino",
     "title": "Casino",
     "ingredients": [
-      "40 ml Old Tom Gin",
-      "10 ml Maraschino Luxardo",
-      "10 ml Fresh Lemon Juice",
-      "2 Dashes Orange Bitters"
+      {
+        "name": "Old Tom Gin",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Maraschino Luxardo",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Orange Bitters",
+        "amount": 1.25,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a twist of lemon zest and a maraschino cherry on top",
     "steps": [
@@ -313,11 +541,31 @@
     "id": "champagne-cocktail",
     "title": "Champagne Cocktail",
     "ingredients": [
-      "90 ml Chilled Champagne",
-      "10 ml Cognac",
-      "2 dashes Angostura bitters",
-      "Few drops of Grand Marnier (optional)",
-      "1 sugar cube"
+      {
+        "name": "Chilled Champagne",
+        "amount": 90.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cognac",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Angostura Bitters",
+        "amount": 1.25,
+        "unit": "ml"
+      },
+      {
+        "name": "Grand Marnier",
+        "amount": 0.15,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar Cube",
+        "amount": 1.0,
+        "unit": "pieces"
+      }
     ],
     "garnish": "Add a twist of orange zest and drop in a maraschino cherry",
     "steps": [
@@ -334,10 +582,26 @@
     "id": "chartreuse-swizzle",
     "title": "Chartreuse Swizzle",
     "ingredients": [
-      "45 ml Green Chartreuse",
-      "30 ml Fresh Pineapple Juice",
-      "22.5 ml Fresh Lime Juice",
-      "15 ml Falernum"
+      {
+        "name": "Green Chartreuse",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Pineapple Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Falernum",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place fresh mint leaves on top and sprinkle lightly with grated nutmeg",
     "steps": [
@@ -354,10 +618,26 @@
     "id": "clover-club",
     "title": "Clover Club",
     "ingredients": [
-      "45 ml Gin",
-      "15 ml Raspberry Syrup",
-      "15 ml Fresh Lemon Juice",
-      "Few Drops of Egg White"
+      {
+        "name": "Gin",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Raspberry Syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Egg White",
+        "amount": 0.15,
+        "unit": "ml"
+      }
     ],
     "garnish": "Add a twist of orange zest on top",
     "steps": [
@@ -373,11 +653,31 @@
     "id": "corpse-reviver-2",
     "title": "Corpse Reviver #2",
     "ingredients": [
-      "30 ml Gin",
-      "30 ml Cointreau",
-      "30 ml Lillet Blanc",
-      "30 ml Fresh Lemon Juice",
-      "1 dash Absinthe"
+      {
+        "name": "Gin",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cointreau",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Lillet Blanc",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Absinthe",
+        "amount": 0.62,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a twist of orange zest on the rim or drop it into the drink",
     "steps": [
@@ -394,10 +694,26 @@
     "id": "cosmopolitan",
     "title": "Cosmopolitan",
     "ingredients": [
-      "40 ml Vodka Citron",
-      "15 ml Cointreau",
-      "15 ml Fresh Lime Juice",
-      "30 ml Cranberry Juice"
+      {
+        "name": "Vodka Citron",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cointreau",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cranberry Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a twist of lemon zest on the rim or drop it into the drink",
     "steps": [
@@ -414,9 +730,21 @@
     "id": "cuba-libre",
     "title": "Cuba Libre",
     "ingredients": [
-      "50 ml White Rum",
-      "120 ml Cola",
-      "10 ml Fresh Lime Juice"
+      {
+        "name": "White Rum",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cola",
+        "amount": 120.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 10.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a lime wedge on the rim of the glass",
     "steps": [
@@ -433,9 +761,21 @@
     "id": "daiquiri",
     "title": "Daiquiri",
     "ingredients": [
-      "60 ml White Cuban Ron",
-      "20 ml Fresh Lime Juice",
-      "2 Bar Spoons Superfine Sugar"
+      {
+        "name": "White Cuban Ron",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Superfine Sugar",
+        "amount": 10.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -453,8 +793,16 @@
     "id": "dark-n-stormy",
     "title": "Dark ‘N’ Stormy",
     "ingredients": [
-      "60 ml Goslings Rum",
-      "100 ml Ginger Beer"
+      {
+        "name": "Goslings Rum",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Ginger Beer",
+        "amount": 100.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a lime wedge or slice on the rim of the glass",
     "steps": [
@@ -471,11 +819,31 @@
     "id": "dons-special-daiquiri",
     "title": "Don’s Special Daiquiri",
     "ingredients": [
-      "30 ml Gold Jamaican Rum",
-      "15 ml Cuban Rum",
-      "15 ml Passion Fruit Syrup",
-      "15 ml Fresh lime juice",
-      "15 ml Honey Syrup"
+      {
+        "name": "Gold Jamaican Rum",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cuban Rum",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Passion Fruit Syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Honey Syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place half a passion fruit on top of the drink",
     "steps": [
@@ -492,8 +860,16 @@
     "id": "dry-martini",
     "title": "Dry Martini",
     "ingredients": [
-      "60 ml Gin",
-      "10 ml Dry Vermouth"
+      {
+        "name": "Gin",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Dry Vermouth",
+        "amount": 10.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Express the oils from a lemon peel over the drink or place a green olive inside if preferred",
     "steps": [
@@ -510,10 +886,26 @@
     "id": "espresso-martini",
     "title": "Espresso Martini",
     "ingredients": [
-      "50 ml Vodka",
-      "30 ml Kahlúa",
-      "10 ml Sugar Syrup",
-      "1 strong Espresso"
+      {
+        "name": "Vodka",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Kahlúa",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar Syrup",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Strong Espresso",
+        "amount": 25.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place three coffee beans on the surface of the drink",
     "steps": [
@@ -530,8 +922,16 @@
     "id": "fernandito",
     "title": "Fernandito",
     "ingredients": [
-      "50 ml Fernet Branca",
-      "Fill up with Cola"
+      {
+        "name": "Fernet Branca",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cola",
+        "amount": 0.0,
+        "unit": "fill"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -548,10 +948,26 @@
     "id": "french-75",
     "title": "French 75",
     "ingredients": [
-      "30 ml Gin",
-      "15 ml Fresh Lemon Juice",
-      "15 ml Sugar Syrup",
-      "60 ml Champagne"
+      {
+        "name": "Gin",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar Syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Champagne",
+        "amount": 60.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -569,8 +985,16 @@
     "id": "french-connection",
     "title": "French Connection",
     "ingredients": [
-      "35 ml Cognac",
-      "35 ml Amaretto"
+      {
+        "name": "Cognac",
+        "amount": 35.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Amaretto",
+        "amount": 35.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -587,9 +1011,21 @@
     "id": "french-martini",
     "title": "French Martini",
     "ingredients": [
-      "45 ml Vodka",
-      "15 ml Raspberry Liqueur",
-      "15 ml Fresh Pineapple Juice"
+      {
+        "name": "Vodka",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Raspberry Liqueur",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Pineapple Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Express the oils from a lemon peel over the surface of the drink",
     "steps": [
@@ -606,8 +1042,16 @@
     "id": "garibaldi",
     "title": "Garibaldi",
     "ingredients": [
-      "45 ml Bitter Campari",
-      "120 ml Freshly Squeezed Orange Juice"
+      {
+        "name": "Bitter Campari",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Orange Juice",
+        "amount": 120.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place an orange wedge on the rim of the glass",
     "steps": [
@@ -624,10 +1068,26 @@
     "id": "gin-basil-smash",
     "title": "Gin Basil Smash",
     "ingredients": [
-      "60ml Gin",
-      "22.5 ml Freshly Squeezed Lemon Juice",
-      "22.5 ml Sugar Syrup",
-      "10 pcs Italian Basil leaves"
+      {
+        "name": "Gin",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar Syrup",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Italian Basil leaves",
+        "amount": 10.0,
+        "unit": "pieces"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -644,10 +1104,26 @@
     "id": "gin-fizz",
     "title": "Gin Fizz",
     "ingredients": [
-      "45 ml Gin",
-      "30 ml Fresh Lemon Juice",
-      "10 ml Simple Syrup",
-      "Splash of Soda Water"
+      {
+        "name": "Gin",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Soda Water",
+        "amount": 5.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a lemon slice on the rim of the glass and add a touch of lemon zest if desired",
     "steps": [
@@ -665,9 +1141,21 @@
     "id": "grand-margarita",
     "title": "Grand Margarita",
     "ingredients": [
-      "45 ml Tequila 100% agave",
-      "30 ml  Grand Marnier",
-      "15 ml Fresh Lime Juice"
+      {
+        "name": "Tequila 100% Agave",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Grand Marnier",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a lime slice on the rim of the glass",
     "steps": [
@@ -686,9 +1174,21 @@
     "id": "grasshopper",
     "title": "Grasshopper",
     "ingredients": [
-      "20 ml Crème de Cacao (White)",
-      "20 ml Crème de Menthe (Green)",
-      "20 ml Fresh Cream"
+      {
+        "name": "Crème de Cacao (White)",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Crème de Menthe (Green)",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Cream",
+        "amount": 20.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -705,9 +1205,21 @@
     "id": "hanky-panky",
     "title": "Hanky Panky",
     "ingredients": [
-      "45 ml London Dry Gin",
-      "45 ml Sweet Red Vermouth",
-      "7.5 ml Fernet"
+      {
+        "name": "London Dry Gin",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sweet Red Vermouth",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fernet",
+        "amount": 7.5,
+        "unit": "ml"
+      }
     ],
     "garnish": "Express the oils from an orange zest over the drink and place the peel on the rim",
     "steps": [
@@ -724,10 +1236,26 @@
     "id": "hemingway-special",
     "title": "Hemingway Special",
     "ingredients": [
-      "60 ml Rum",
-      "40 ml Grapefruit Juice",
-      "15 ml Maraschino Luxardo",
-      "15 ml Fresh Lime"
+      {
+        "name": "Rum",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Grapefruit Juice",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Maraschino Luxardo",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -744,9 +1272,21 @@
     "id": "horses-neck",
     "title": "Horse’s Neck",
     "ingredients": [
-      "40 ml Cognac",
-      "120 ml Ginger Ale",
-      "Dash of Angostura Bitters (optional)"
+      {
+        "name": "Cognac",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Ginger Ale",
+        "amount": 120.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Angostura Bitters",
+        "amount": 0.62,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a long spiral of lemon peel inside the glass so it curls around the drink",
     "steps": [
@@ -763,15 +1303,51 @@
     "id": "iba-tiki",
     "title": "IBA Tiki",
     "ingredients": [
-      "30 ml Ron Profundo Havana Club",
-      "30 ml Ron Smoky Havana Club",
-      "15 ml Licor Amaretto",
-      "5 ml Licor Frangelico",
-      "5 drops Maraschino Luxardo",
-      "30 ml Passion Fruit Puree",
-      "90 Fresh Pineapple Juice",
-      "30 Fresh Lime Juice",
-      "1 pc Gengibre Slice"
+      {
+        "name": "Ron Profundo Havana Club",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Ron Smoky Havana Club",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Licor Amaretto",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Licor Frangelico",
+        "amount": 5.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Maraschino Luxardo",
+        "amount": 0.25,
+        "unit": "ml"
+      },
+      {
+        "name": "Passion Fruit Puree",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Pineapple Juice",
+        "amount": 90.0,
+        "unit": "pieces"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 30.0,
+        "unit": "pieces"
+      },
+      {
+        "name": "Gengibre Slice",
+        "amount": 1.0,
+        "unit": "pieces"
+      }
     ],
     "garnish": "Decorate the drink with assorted citrus slices and a piece of dehydrated pineapple",
     "steps": [
@@ -789,13 +1365,41 @@
     "id": "illegal",
     "title": "Illegal",
     "ingredients": [
-      "30 ml Espadin Mezcal",
-      "15 ml Jamaica Overproof White Rum",
-      "15 ml Falernum",
-      "1 Bar Spoon Maraschino Luxardo",
-      "22.5 ml Fresh Lime Juice",
-      "15 ml Simple Syrup",
-      "Few Drops of Egg White (Optional)"
+      {
+        "name": "Espadin Mezcal",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Jamaica Overproof White Rum",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Falernum",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Maraschino Luxardo",
+        "amount": 5.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Egg White",
+        "amount": 0.15,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -812,10 +1416,26 @@
     "id": "irish-coffee",
     "title": "Irish Coffee",
     "ingredients": [
-      "50 ml Irish Whiskey",
-      "120 ml Hot coffee",
-      "50 ml Fresh cream (Chilled)",
-      "1 teaspoon Sugar"
+      {
+        "name": "Irish Whiskey",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Hot coffee",
+        "amount": 120.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh cream (Chilled)",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar",
+        "amount": 5.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -833,10 +1453,26 @@
     "id": "john-collins",
     "title": "John Collins",
     "ingredients": [
-      "45 ml Gin",
-      "30 ml Fresh Lemon Juice",
-      "15 ml Simple Syrup",
-      "60 ml  Soda Water"
+      {
+        "name": "Gin",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Soda Water",
+        "amount": 60.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a lemon slice on the rim of the glass and add a maraschino cherry",
     "steps": [
@@ -853,11 +1489,31 @@
     "id": "jungle-bird",
     "title": "Jungle Bird",
     "ingredients": [
-      "45 ml Blackstrap rum",
-      "22.5 ml Campari",
-      "45 ml Pineapple juice",
-      "15 ml Freshly Squeezed Lime juice",
-      "15 ml Demerara sugar syrup"
+      {
+        "name": "Blackstrap rum",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Campari",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Pineapple juice",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Demerara sugar syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a pineapple wedge on the rim of the glass",
     "steps": [
@@ -874,8 +1530,16 @@
     "id": "kir",
     "title": "Kir",
     "ingredients": [
-      "90 ml Dry White Wine",
-      "10 ml Crème de Cassis"
+      {
+        "name": "Dry White Wine",
+        "amount": 90.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Crème de Cassis",
+        "amount": 10.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -891,10 +1555,26 @@
     "id": "last-word",
     "title": "Last Word",
     "ingredients": [
-      "22.5 ml Gin",
-      "22.5 ml Green Chartreuse",
-      "22.5 ml Maraschino Luxardo",
-      "22.5 ml Fresh Lime Juice"
+      {
+        "name": "Gin",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Green Chartreuse",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Maraschino Luxardo",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -911,9 +1591,21 @@
     "id": "lemon-drop-martini",
     "title": "Lemon Drop Martini",
     "ingredients": [
-      "30 ml Vodka",
-      "20 ml Triple Sec",
-      "15 ml Fresh Squeezed Lemon Juice"
+      {
+        "name": "Vodka",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Triple Sec",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -930,14 +1622,46 @@
     "id": "long-island-iced-tea",
     "title": "Long Island Iced Tea",
     "ingredients": [
-      "15 ml Vodka",
-      "15 ml Tequila",
-      "15 ml White rum",
-      "15 ml Gin",
-      "15 ml Cointreau",
-      "25 ml Lemon juice",
-      "30 ml Simple syrup",
-      "30 ml Cola"
+      {
+        "name": "Vodka",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Tequila",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "White Rum",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cointreau",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Lemon juice",
+        "amount": 25.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cola",
+        "amount": 30.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a lemon slice on the rim of the glass",
     "steps": [
@@ -955,12 +1679,36 @@
     "id": "mai-tai",
     "title": "Mai-Tai",
     "ingredients": [
-      "30 ml Amber Jamaican Rum",
-      "30 ml Martinique Molasses Rhum*",
-      "15 ml Orange Curacao",
-      "15 ml Orgeat Syrup (Almond)",
-      "30 ml Fresh Squeezed Lime Juice",
-      "7.5 ml Simple Syrup"
+      {
+        "name": "Amber Jamaican Rum",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Martinique Molasses Rhum",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Orange Curacao",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Orgeat Syrup (Almond)",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": 7.5,
+        "unit": "ml"
+      }
     ],
     "garnish": "Decorate the drink with a pineapple spear, a few mint leaves, and a strip of lime peel",
     "steps": [
@@ -977,9 +1725,21 @@
     "id": "manhattan",
     "title": "Manhattan",
     "ingredients": [
-      "50 ml Rye Whiskey",
-      "20 ml Sweet Red Vermouth",
-      "1 dash Angostura Bitters"
+      {
+        "name": "Rye Whiskey",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sweet Red Vermouth",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Angostura Bitters",
+        "amount": 0.62,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a cocktail cherry into the drink before serving",
     "steps": [
@@ -996,9 +1756,21 @@
     "id": "margarita",
     "title": "Margarita",
     "ingredients": [
-      "50 ml Tequila 100% Agave",
-      "20 ml Triple Sec",
-      "15 ml Freshly Squeezed Lime Juice"
+      {
+        "name": "Tequila 100% Agave",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Triple Sec",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Serve with a half rim of salt on the glass",
     "steps": [
@@ -1016,10 +1788,26 @@
     "id": "martinez",
     "title": "Martinez",
     "ingredients": [
-      "45 ml London Dry Gin",
-      "45 ml Sweet Red Vermouth",
-      "1 Bar Spoon Maraschino Luxardo",
-      "2 Dashes Orange Bitters"
+      {
+        "name": "London Dry Gin",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sweet Red Vermouth",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Maraschino Luxardo",
+        "amount": 5.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Orange Bitters",
+        "amount": 1.25,
+        "unit": "ml"
+      }
     ],
     "garnish": "Express the oils from a strip of lemon zest over the drink and place the peel on the rim",
     "steps": [
@@ -1036,10 +1824,26 @@
     "id": "mary-pickford",
     "title": "Mary Pickford",
     "ingredients": [
-      "45 ml White Rum",
-      "45 ml Fresh Pineapple Juice",
-      "7.5 ml Maraschino Luxardo",
-      "5 ml Grenadine Syrup"
+      {
+        "name": "White Rum",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Pineapple Juice",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Maraschino Luxardo",
+        "amount": 7.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Grenadine Syrup",
+        "amount": 5.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -1056,8 +1860,16 @@
     "id": "mimosa",
     "title": "Mimosa",
     "ingredients": [
-      "75 ml Freshly Squeezed  Orange Juice",
-      "75 ml Prosecco"
+      {
+        "name": "Fresh Orange Juice",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Prosecco",
+        "amount": 75.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a thin twist of orange peel on the rim of the glass",
     "steps": [
@@ -1074,10 +1886,26 @@
     "id": "mint-julep",
     "title": "Mint Julep",
     "ingredients": [
-      "60 ml Bourbon Whiskey",
-      "4 fresh Mint sprigs",
-      "1 tsp Powdered Sugar",
-      "2 tsp Water"
+      {
+        "name": "Bourbon Whiskey",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Mint Sprigs",
+        "amount": 4.0,
+        "unit": "pieces"
+      },
+      {
+        "name": "Powdered Sugar",
+        "amount": 5.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Water",
+        "amount": 10.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Add a sprig of mint on top of the drink before serving",
     "steps": [
@@ -1095,12 +1923,36 @@
     "id": "missionarys-downfall",
     "title": "Missionary’s Downfall",
     "ingredients": [
-      "30 ml White rum",
-      "15 ml Peach Brandy",
-      "15 ml Fresh lime juice",
-      "30 ml Honey Mix",
-      "10 pcs Mint Leaves",
-      "3 to 4 pcs Pineapple Chunks"
+      {
+        "name": "White Rum",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Peach Brandy",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Honey Mix",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Mint Leaves",
+        "amount": 10.0,
+        "unit": "pieces"
+      },
+      {
+        "name": "Pineapple Chunks",
+        "amount": 3.0,
+        "unit": "pieces"
+      }
     ],
     "garnish": "Place a sprig of mint and a slice of pineapple on top of the drink",
     "steps": [
@@ -1117,11 +1969,31 @@
     "id": "mojito",
     "title": "Mojito",
     "ingredients": [
-      "45 ml White Cuban Ron",
-      "20 ml  Fresh Lime Juice",
-      "6 pcs Mint Sprigs",
-      "2 tsp White Cane Sugar",
-      "Soda Water"
+      {
+        "name": "White Cuban Ron",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Mint Sprigs",
+        "amount": 6.0,
+        "unit": "pieces"
+      },
+      {
+        "name": "White Cane Sugar",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Soda Water",
+        "amount": 0.0,
+        "unit": ""
+      }
     ],
     "garnish": "Add a sprig of mint and place a slice of lime on the rim of the glass",
     "steps": [
@@ -1140,10 +2012,26 @@
     "id": "monkey-gland",
     "title": "Monkey Gland",
     "ingredients": [
-      "45 ml Dry Gin",
-      "45 ml Fresh Orange Juice",
-      "1 Tablespoon Absinthe",
-      "1 Tablespoon Grenadine Syrup"
+      {
+        "name": "Dry Gin",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Orange Juice",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Absinthe",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Grenadine Syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -1160,9 +2048,21 @@
     "id": "moscow-mule",
     "title": "Moscow Mule",
     "ingredients": [
-      "45 ml Smirnoff Vodka",
-      "120 ml Ginger Beer",
-      "10 ml Fresh lime juice"
+      {
+        "name": "Smirnoff Vodka",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Ginger Beer",
+        "amount": 120.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 10.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a slice of lime on the rim of the glass",
     "steps": [
@@ -1180,10 +2080,26 @@
     "id": "naked-and-famous",
     "title": "Naked and Famous",
     "ingredients": [
-      "22.5 ml Mezcal",
-      "22.5 ml Yellow Chartreuse",
-      "22.5 ml Aperol",
-      "22.5 ml Fresh Lime Juice"
+      {
+        "name": "Mezcal",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Yellow Chartreuse",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Aperol",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -1200,9 +2116,21 @@
     "id": "negroni",
     "title": "Negroni",
     "ingredients": [
-      "30 ml Gin",
-      "30 ml Bitter Campari",
-      "30 ml Sweet Red Vermouth"
+      {
+        "name": "Gin",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Bitter Campari",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sweet Red Vermouth",
+        "amount": 30.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a half slice of orange inside the glass before serving",
     "steps": [
@@ -1219,11 +2147,31 @@
     "id": "new-york-sour",
     "title": "New York Sour",
     "ingredients": [
-      "60 ml Rye Whiskey or Bourbon",
-      "22.5 ml Simple syrup",
-      "30 ml Fresh lemon juice",
-      "Few Drops of Egg White",
-      "15 ml Red wine (Shiraz or Malbech)"
+      {
+        "name": "Rye Whiskey or Bourbon",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Egg White",
+        "amount": 0.15,
+        "unit": "ml"
+      },
+      {
+        "name": "Red wine (Shiraz or Malbech)",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Add a strip of lemon or orange zest and place a cherry in the drink before serving",
     "steps": [
@@ -1241,12 +2189,36 @@
     "id": "old-cuban",
     "title": "Old Cuban",
     "ingredients": [
-      "6/8 pcs Mint Leaves",
-      "45 ml Aged Rum",
-      "22.5 ml Fresh Lime Juice",
-      "30 ml Simple Syrup",
-      "2 Dashes Angostura Bitters",
-      "60 ml Brut Champagne or Prosecco"
+      {
+        "name": "Mint Leaves",
+        "amount": 0.75,
+        "unit": "pieces"
+      },
+      {
+        "name": "Aged Rum",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Angostura Bitters",
+        "amount": 1.25,
+        "unit": "ml"
+      },
+      {
+        "name": "Brut Champagne or Prosecco",
+        "amount": 60.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a sprig of fresh mint on top of the drink before serving",
     "steps": [
@@ -1264,10 +2236,26 @@
     "id": "old-fashioned",
     "title": "Old Fashioned",
     "ingredients": [
-      "45 ml Bourbon or Rye Whiskey",
-      "1 Sugar Cube",
-      "Few Dashes Angostura Bitters",
-      "Few Dashes Plain Water"
+      {
+        "name": "Bourbon or Rye Whiskey",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar Cube",
+        "amount": 1.0,
+        "unit": "pieces"
+      },
+      {
+        "name": "Few Dashes Angostura Bitters",
+        "amount": 0.0,
+        "unit": ""
+      },
+      {
+        "name": "Few Dashes Plain Water",
+        "amount": 0.0,
+        "unit": ""
+      }
     ],
     "garnish": "Add a slice or zest of orange and place a cocktail cherry in the drink before serving",
     "steps": [
@@ -1285,10 +2273,26 @@
     "id": "paloma",
     "title": "Paloma",
     "ingredients": [
-      "50 ml 100% Agave Tequila",
-      "5 ml Fresh lime",
-      "A pinch of Salt",
-      "100 ml Pink Grapefruit Soda"
+      {
+        "name": "Tequila 100% Agave",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime",
+        "amount": 5.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Salt",
+        "amount": 1.0,
+        "unit": "pinch"
+      },
+      {
+        "name": "Pink Grapefruit Soda",
+        "amount": 100.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a slice of lime on the rim of the glass before serving",
     "steps": [
@@ -1307,10 +2311,26 @@
     "id": "paper-plane",
     "title": "Paper Plane",
     "ingredients": [
-      "30 ml Bourbon Whiskey",
-      "30 ml Amaro Nonino",
-      "30 ml Aperol",
-      "30 ml Fresh Lemon Juice"
+      {
+        "name": "Bourbon Whiskey",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Amaro Nonino",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Aperol",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -1327,9 +2347,21 @@
     "id": "paradise",
     "title": "Paradise",
     "ingredients": [
-      "30 ml Gin",
-      "20 ml Apricot Brandy",
-      "15 ml Fresh Orange Juice"
+      {
+        "name": "Gin",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Apricot Brandy",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Orange Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -1346,11 +2378,31 @@
     "id": "penicillin",
     "title": "Penicillin",
     "ingredients": [
-      "60 ml Blended scotch whisky",
-      "7.5 ml Lagavulin 16y",
-      "22.5 ml Fresh lemon juice",
-      "22.5 ml Honey syrup",
-      "2-3 quarter size sliced fresh ginger"
+      {
+        "name": "Blended scotch whisky",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Lagavulin 16y",
+        "amount": 7.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Honey Syrup",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh ginger",
+        "amount": 2.0,
+        "unit": "pieces"
+      }
     ],
     "garnish": "Add a few slices of candied ginger on top of the drink before serving",
     "steps": [
@@ -1369,9 +2421,21 @@
     "id": "pina-colada",
     "title": "Pina Colada",
     "ingredients": [
-      "50 ml White Rum",
-      "30 ml Coconut Cream",
-      "50 ml Fresh Pineapple Juice"
+      {
+        "name": "White Rum",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Coconut Cream",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Pineapple Juice",
+        "amount": 50.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a slice of pineapple on the rim and add a cocktail cherry on top",
     "steps": [
@@ -1389,12 +2453,36 @@
     "id": "pisco-punch",
     "title": "Pisco Punch",
     "ingredients": [
-      "60 ml Pisco",
-      "22.5 ml Fresh Pineapple Juice",
-      "15 ml Simple Syrup",
-      "15 ml Fresh Lemon Juice",
-      "30 ml Dry White Wine",
-      "3 pcs Cloves"
+      {
+        "name": "Pisco",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Pineapple Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Dry White Wine",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cloves",
+        "amount": 3.0,
+        "unit": "pieces"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -1413,10 +2501,26 @@
     "id": "pisco-sour",
     "title": "Pisco Sour",
     "ingredients": [
-      "60 ml Pisco",
-      "30 ml Fresh Lemon Juice",
-      "20 ml Simple Syrup",
-      "1 Raw whole Egg White"
+      {
+        "name": "Pisco",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Raw whole Egg White",
+        "amount": 1.0,
+        "unit": "pieces"
+      }
     ],
     "garnish": "Add a few drops of aromatic bitters on the surface of the drink before serving",
     "steps": [
@@ -1433,9 +2537,21 @@
     "id": "planters-punch",
     "title": "Planters Punch",
     "ingredients": [
-      "45 ml Jamaican Rum",
-      "15 ml Lime Juice",
-      "30 ml Sugar Cane Juice"
+      {
+        "name": "Jamaican Rum",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar Cane Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a strip of orange zest on top of the drink before serving",
     "steps": [
@@ -1452,11 +2568,31 @@
     "id": "porn-star-martini",
     "title": "Porn Star Martini",
     "ingredients": [
-      "50 ml Vanilla Vodka",
-      "20 ml Passion Fruit Liqueur",
-      "50 ml Passion Fruit Puree",
-      "2 Bar Spoons Vanilla Sugar",
-      "50 ml Champagne to serve on the side"
+      {
+        "name": "Vanilla Vodka",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Passion Fruit Liqueur",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Passion Fruit Puree",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Vanilla Sugar",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Champagne",
+        "amount": 50.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place half a passion fruit on top of the drink and lightly dust with sugar before serving",
     "steps": [
@@ -1474,9 +2610,21 @@
     "id": "porto-flip",
     "title": "Porto Flip",
     "ingredients": [
-      "15 ml Brandy",
-      "45 ml Red Tawny Port Wine",
-      "10 ml Egg Yolk"
+      {
+        "name": "Brandy",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Red Tawny Port Wine",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Egg Yolk",
+        "amount": 10.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Sprinkle freshly ground nutmeg on top before serving",
     "steps": [
@@ -1493,35 +2641,87 @@
     "id": "rabo-de-galo",
     "title": "Rabo de Galo",
     "ingredients": [
-      "60 ml Cachaca",
-      "20 ml Sweet Vermouth Cinzano Rosso",
-      "15 ml Cynar",
-      "2 Drops Angostura (Optional)"
+      {
+        "name": "Cachaça",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sweet Vermouth Cinzano Rosso",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cynar",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Angostura",
+        "amount": 0.1,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place an orange twist on the rim of the glass before serving",
     "steps": [
-      "Add cachaca, sweet vermouth, and cynar directly into a sturdy glass",
+      "Add cachaça, sweet vermouth, and cynar directly into a sturdy glass",
       "Fill the glass with fresh ice cubes",
       "Stir gently until the drink is well mixed and chilled"
     ],
     "img": "rabo-de-galo.webp",
     "glass": "rocks",
     "description": "The Rabo de Galo is bold and earthy, with cachaça providing a strong and rustic base. Sweet vermouth adds herbal sweetness, while Cynar contributes a bitter, vegetal depth. Optional bitters enhance the complexity with subtle spice. The mouthfeel is smooth yet robust, with a layered balance of sweet, bitter, and herbal notes.",
-    "base": "Cachaca"
+    "base": "Cachaça"
   },
   {
     "id": "ramos-fizz",
     "title": "Ramos Fizz",
     "ingredients": [
-      "45 ml Gin",
-      "15 ml Fresh Lime Juice",
-      "15 ml Fresh Lemon Juice",
-      "30 ml Sugar Syrup",
-      "60 ml Cream",
-      "30ml Egg white",
-      "3 Dashes Orange Flower Water",
-      "2 Drops Vanilla Extract",
-      "Soda Water"
+      {
+        "name": "Gin",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar Syrup",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cream",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Egg White",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Orange Flower Water",
+        "amount": 1.88,
+        "unit": "ml"
+      },
+      {
+        "name": "Vanilla Extract",
+        "amount": 0.1,
+        "unit": "ml"
+      },
+      {
+        "name": "Soda Water",
+        "amount": 0.0,
+        "unit": ""
+      }
     ],
     "garnish": "",
     "steps": [
@@ -1541,10 +2741,26 @@
     "id": "remember-the-maine",
     "title": "Remember the Maine",
     "ingredients": [
-      "60 ml Rye Whiskey",
-      "22.5 ml Sweet Vermouth",
-      "15 ml Cherry Brandy Luxardo",
-      "7.5 ml Absinthe"
+      {
+        "name": "Rye Whiskey",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sweet Vermouth",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Cherry Brandy Luxardo",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Absinthe",
+        "amount": 7.5,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a strip of fresh lemon zest on the drink before serving",
     "steps": [
@@ -1563,11 +2779,31 @@
     "id": "russian-spring-punch",
     "title": "Russian Spring Punch",
     "ingredients": [
-      "25 ml Vodka",
-      "25 ml Fresh Lemon Juice",
-      "15 ml Creme de Cassis",
-      "10 ml Sugar Syrup",
-      "Top up with Sparkling Wine"
+      {
+        "name": "Vodka",
+        "amount": 25.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 25.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Crème de Cassis",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar Syrup",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Top up with Sparkling Wine",
+        "amount": 0.0,
+        "unit": ""
+      }
     ],
     "garnish": "Place a few fresh blackberries in the glass and add a slice of lemon before serving",
     "steps": [
@@ -1585,8 +2821,16 @@
     "id": "rusty-nail",
     "title": "Rusty Nail",
     "ingredients": [
-      "45 ml Scotch Whisky",
-      "25 ml Drambuie"
+      {
+        "name": "Scotch Whisky",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Drambuie",
+        "amount": 25.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a strip of lemon zest on the drink before serving",
     "steps": [
@@ -1603,10 +2847,26 @@
     "id": "sazerac",
     "title": "Sazerac",
     "ingredients": [
-      "50 ml Cognac",
-      "10 ml Absinthe",
-      "1 Sugar Cube",
-      "2 Dashes Peychaud’s Bitters"
+      {
+        "name": "Cognac",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Absinthe",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar Cube",
+        "amount": 1.0,
+        "unit": "pieces"
+      },
+      {
+        "name": "Peychaud’s Bitters",
+        "amount": 1.25,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a strip of fresh lemon zest on the drink before serving",
     "steps": [
@@ -1625,9 +2885,21 @@
     "id": "sea-breeze",
     "title": "Sea Breeze",
     "ingredients": [
-      "40 ml Vodka",
-      "120 ml Cranberry Juice",
-      "30 ml Grapefruit Juice"
+      {
+        "name": "Vodka",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cranberry Juice",
+        "amount": 120.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Grapefruit Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a strip of orange zest on the rim and add a cherry before serving",
     "steps": [
@@ -1645,10 +2917,26 @@
     "id": "sex-on-the-beach",
     "title": "Sex on the Beach",
     "ingredients": [
-      "40 ml Vodka",
-      "20 ml Peach Schnapps",
-      "40 ml Fresh Orange Juice",
-      "40 ml Cranberry Juice"
+      {
+        "name": "Vodka",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Peach Schnapps",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Orange Juice",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cranberry Juice",
+        "amount": 40.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place half an orange slice on the rim of the glass before serving",
     "steps": [
@@ -1666,11 +2954,31 @@
     "id": "sherry-cobbler",
     "title": "Sherry Cobbler",
     "ingredients": [
-      "45 ml Amontillado sherry",
-      "45 ml Palo Cortado",
-      "1 tsp Superfine Sugar (or granulated)",
-      "1/2  Orange Wheel",
-      "1/2  Lemon Wheel"
+      {
+        "name": "Amontillado sherry",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Palo Cortado",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Superfine Sugar (or granulated)",
+        "amount": 5.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Orange Wheel",
+        "amount": 0.5,
+        "unit": "pieces"
+      },
+      {
+        "name": "Lemon Wheel",
+        "amount": 0.5,
+        "unit": "pieces"
+      }
     ],
     "garnish": "Place a few fresh berries along with a small slice of orange and lemon on top before serving",
     "steps": [
@@ -1688,9 +2996,21 @@
     "id": "sidecar",
     "title": "Sidecar",
     "ingredients": [
-      "50 ml Cognac",
-      "20 ml Triple Sec",
-      "20 ml Fresh Lemon Juice"
+      {
+        "name": "Cognac",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Triple Sec",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 20.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -1707,14 +3027,46 @@
     "id": "singapore-sling",
     "title": "Singapore Sling",
     "ingredients": [
-      "30 ml Gin",
-      "15 ml Cherry Sangue Morlacco",
-      "7.5 ml Cointreau",
-      "7.5 ml DOM Bénédictine",
-      "120 ml Fresh Pineapple Juice",
-      "15 ml Fresh Lime Juice",
-      "10 ml Grenadine Syrup",
-      "A dash of Angostura bitters"
+      {
+        "name": "Gin",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cherry Sangue Morlacco",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cointreau",
+        "amount": 7.5,
+        "unit": "ml"
+      },
+      {
+        "name": "DOM Bénédictine",
+        "amount": 7.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Pineapple Juice",
+        "amount": 120.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Grenadine Syrup",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Angostura Bitters",
+        "amount": 0.62,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a slice of pineapple and a maraschino cherry on top before serving",
     "steps": [
@@ -1731,11 +3083,31 @@
     "id": "south-side",
     "title": "South Side",
     "ingredients": [
-      "60 ml London dry Gin",
-      "30 ml Fresh Lemon  Juice",
-      "15 ml Simple syrup",
-      "5/6 Mint leaves",
-      "Few drops Egg white (Optional)"
+      {
+        "name": "London Dry Gin",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Mint Leaves",
+        "amount": 0.83,
+        "unit": "pieces"
+      },
+      {
+        "name": "Few drops Egg White",
+        "amount": 0.0,
+        "unit": ""
+      }
     ],
     "garnish": "Place a fresh sprig of mint on top before serving",
     "steps": [
@@ -1752,11 +3124,31 @@
     "id": "spicy-fifty",
     "title": "Spicy Fifty",
     "ingredients": [
-      "50 ml Vodka Vanilla",
-      "15 ml Elderflower Cordial",
-      "15 ml Fresh Lime Juice",
-      "10 ml Monin Honey Syrup",
-      "2 thin Slices Red Chili Pepper"
+      {
+        "name": "Vodka Vanilla",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Elderflower Cordial",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Monin Honey Syrup",
+        "amount": 10.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Red Chili Pepper Slices",
+        "amount": 2.0,
+        "unit": "pieces"
+      }
     ],
     "garnish": "Place a whole red chili pepper on the rim or gently rest it inside the glass before serving",
     "steps": [
@@ -1773,9 +3165,21 @@
     "id": "spritz",
     "title": "Spritz",
     "ingredients": [
-      "90 ml Prosecco",
-      "60 ml Aperol",
-      "Splash of Soda water"
+      {
+        "name": "Prosecco",
+        "amount": 90.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Aperol",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Soda Water",
+        "amount": 5.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a slice of orange inside the glass before serving",
     "steps": [
@@ -1793,8 +3197,16 @@
     "id": "stinger",
     "title": "Stinger",
     "ingredients": [
-      "50 ml Cognac",
-      "20 ml White Crème de Menthe"
+      {
+        "name": "Cognac",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "White Crème de Menthe",
+        "amount": 20.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a fresh mint leaf on top before serving",
     "steps": [
@@ -1811,11 +3223,31 @@
     "id": "suffering-bastard",
     "title": "Suffering Bastard",
     "ingredients": [
-      "30 ml Cognac or Brandy",
-      "30 ml Gin",
-      "15 ml Fresh Lime Juice",
-      "2 Dashes Angostura Bitters",
-      "Top up Ginger beer"
+      {
+        "name": "Cognac or Brandy",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Angostura Bitters",
+        "amount": 1.25,
+        "unit": "ml"
+      },
+      {
+        "name": "Top up Ginger beer",
+        "amount": 0.0,
+        "unit": ""
+      }
     ],
     "garnish": "Place a fresh sprig of mint on top and add a slice of orange before serving",
     "steps": [
@@ -1833,9 +3265,21 @@
     "id": "tequila-sunrise",
     "title": "Tequila Sunrise",
     "ingredients": [
-      "45 ml Tequila",
-      "90 ml Fresh Orange Juice",
-      "15 ml Grenadine Syrup"
+      {
+        "name": "Tequila",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Orange Juice",
+        "amount": 90.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Grenadine Syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place half an orange slice on the rim or add a strip of orange zest before serving",
     "steps": [
@@ -1854,13 +3298,46 @@
     "id": "three-dots-and-a-dash",
     "title": "Three Dots and a Dash",
     "ingredients": [
-      "45 ml Rhum Martinique Agricole",
-      "15 ml Blended Aged Rum",
-      "7.5 ml Falernum",
-      "7.5 ml Allspice Saint Elizabeth15 ml Fresh Lime Juice",
-      "15 ml Fresh Orange juice",
-      "15 ml Honey Syrup",
-      "2 Dashes Angostura Bitters"
+      {
+        "name": "Rhum Martinique Agricole",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Blended Aged Rum",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Falernum",
+        "amount": 7.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Allspice Saint Elizabeth",
+        "amount": 7.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Orange Juice",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Honey Syrup",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Angostura Bitters",
+        "amount": 1.25,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place three cherries on a skewer and add a rectangular piece of pineapple on top before serving",
     "steps": [
@@ -1878,10 +3355,26 @@
     "id": "tipperary",
     "title": "Tipperary",
     "ingredients": [
-      "50 ml Irish Whiskey",
-      "25 ml Sweet Red Vermouth",
-      "15 ml Green Chartreuse",
-      "2 Dashes Angostura Bitters"
+      {
+        "name": "Irish Whiskey",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sweet Red Vermouth",
+        "amount": 25.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Green Chartreuse",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Angostura Bitters",
+        "amount": 1.25,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a fresh slice of orange on the rim or inside the glass before serving",
     "steps": [
@@ -1898,9 +3391,21 @@
     "id": "tommys-margarita",
     "title": "Tommy’s Margarita",
     "ingredients": [
-      "60 ml Tequila 100% agave",
-      "30 ml Fresh Lime Juice",
-      "30 ml Agave Nectar"
+      {
+        "name": "Tequila 100% Agave",
+        "amount": 60.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Agave Nectar",
+        "amount": 30.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a slice of lime on the rim of the glass before serving",
     "steps": [
@@ -1917,10 +3422,26 @@
     "id": "trinidad-sour",
     "title": "Trinidad Sour",
     "ingredients": [
-      "45 ml Angostura Bitters",
-      "30 ml Orgeat Syrup",
-      "22.5 ml Fresh Lemon Juice",
-      "15 ml Rye Whiskey"
+      {
+        "name": "Angostura Bitters",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Orgeat Syrup",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Rye Whiskey",
+        "amount": 15.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -1937,11 +3458,31 @@
     "id": "tuxedo",
     "title": "Tuxedo",
     "ingredients": [
-      "30 ml Old Tom Gin",
-      "30 ml Dry Vermouth",
-      "1/2 Bar Spoon Maraschino Luxardo",
-      "1/4 Bar Spoon of Absinthe",
-      "3 Dashes Orange Bitters"
+      {
+        "name": "Old Tom Gin",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Dry Vermouth",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Maraschino Luxardo",
+        "amount": 0.25,
+        "unit": "ml"
+      },
+      {
+        "name": "Absinthe",
+        "amount": 0.25,
+        "unit": "ml"
+      },
+      {
+        "name": "Orange Bitters",
+        "amount": 1.88,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a cherry in the drink and add a strip of lemon zest on top before serving",
     "steps": [
@@ -1958,11 +3499,31 @@
     "id": "ve.n.to",
     "title": "Ve.N.To",
     "ingredients": [
-      "45 ml White Smooth Grappa",
-      "22.5 ml Fresh lemon Juice",
-      "15 ml Honey mix (replace water with chamomile)*",
-      "15 ml Chamomile cordial",
-      "Few Drops of Egg White (Optional)"
+      {
+        "name": "White Smooth Grappa",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 22.5,
+        "unit": "ml"
+      },
+      {
+        "name": "Honey mix (replace water with chamomile)",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Chamomile cordial",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Egg White",
+        "amount": 0.15,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a strip of lemon zest on top and add a few white grapes before serving",
     "steps": [
@@ -1979,9 +3540,21 @@
     "id": "vesper",
     "title": "Vesper",
     "ingredients": [
-      "45 ml Gin",
-      "15 ml Vodka",
-      "7.5 ml Lillet Blanc"
+      {
+        "name": "Gin",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Lillet Blanc",
+        "amount": 7.5,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a strip of fresh lemon zest on top before serving",
     "steps": [
@@ -1998,11 +3571,31 @@
     "id": "vieux-carre",
     "title": "Vieux Carré",
     "ingredients": [
-      "30 ml Rye Whiskey",
-      "30 ml Cognac",
-      "30 ml Sweet Vermouth",
-      "1 Bar Spoon Bénédictine",
-      "2 Dashes Peychaud’s Bitters"
+      {
+        "name": "Rye Whiskey",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Cognac",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sweet Vermouth",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Bénédictine",
+        "amount": 5.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Peychaud’s Bitters",
+        "amount": 1.25,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a strip of orange zest on top and add a maraschino cherry before serving",
     "steps": [
@@ -2019,10 +3612,26 @@
     "id": "whiskey-sour",
     "title": "Whiskey Sour",
     "ingredients": [
-      "45 ml Bourbon Whiskey",
-      "25 ml Fresh Lemon Juice",
-      "20 ml Sugar Syrup",
-      "Few Drops of Egg White (Optional)"
+      {
+        "name": "Bourbon Whiskey",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 25.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar Syrup",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Egg White",
+        "amount": 0.15,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place half an orange slice and a maraschino cherry on top, and optionally add a strip of orange zest before serving",
     "steps": [
@@ -2039,9 +3648,21 @@
     "id": "white-lady",
     "title": "White Lady",
     "ingredients": [
-      "40 ml Gin",
-      "30 ml Triple Sec",
-      "20 ml Fresh Lemon Juice"
+      {
+        "name": "Gin",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Triple Sec",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lemon Juice",
+        "amount": 20.0,
+        "unit": "ml"
+      }
     ],
     "garnish": "",
     "steps": [
@@ -2058,15 +3679,51 @@
     "id": "zombie",
     "title": "Zombie",
     "ingredients": [
-      "45 ml Jamaican dark rum",
-      "45 ml Gold Puerto Rican rum",
-      "30 ml Demerara Rum",
-      "20 ml Fresh lime juice",
-      "15 ml Falernum",
-      "15 ml Donn’s Mix*",
-      "1 tsp Grenadine syrup",
-      "1 dash Angostura bitters",
-      "6 drops Pernod"
+      {
+        "name": "Jamaican dark rum",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Gold Puerto Rican rum",
+        "amount": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Demerara Rum",
+        "amount": 30.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Fresh Lime Juice",
+        "amount": 20.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Falernum",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Donn’s Mix",
+        "amount": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Grenadine Syrup",
+        "amount": 5.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Angostura Bitters",
+        "amount": 0.62,
+        "unit": "ml"
+      },
+      {
+        "name": "Pernod",
+        "amount": 0.3,
+        "unit": "ml"
+      }
     ],
     "garnish": "Place a sprig of fresh mint on top before serving",
     "steps": [
