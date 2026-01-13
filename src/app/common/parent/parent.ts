@@ -24,7 +24,6 @@ export class Parent implements OnDestroy {
   drawerVisible = model(false);
 
   routes = [
-    { icon: 'home', label: 'Home', route: '/' },
     { icon: 'dashboard', label: 'Dashboard', route: '/dashboard' },
     { icon: 'inventory_2', label: 'My Bar', route: '/my-bar' },
     { icon: 'explore', label: 'Browse', route: '/browse' },
